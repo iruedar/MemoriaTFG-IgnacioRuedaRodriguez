@@ -353,76 +353,160 @@ Lo importante es que quede claro cuánto tiempo llevas (tiempo natural, p.ej., 6
 \chapter{Estado del arte}
 \label{chap:estado}
 
-Descripción de las tecnologías que utilizas en tu trabajo. 
-Con dos o tres párrafos por cada tecnología, vale. 
-Se supone que aquí viene todo lo que no has hecho tú.
+\section{Inteligencia Artificial} 
+\label{sec:InteligenciaArtificial}
 
-Puedes citar libros, como el de Bonabeau et al., sobre procesos estigmérgicos~\cite{bonabeau:_swarm}. 
-Me encantan los procesos estigmérgicos.
-Deberías leer más sobre ellos.
-Pero quizás no ahora, que tenemos que terminar la memoria para sacarnos por fin el título.
-Nota que el \~ \ añade un espacio en blanco, pero no deja que exista un salto de línea. 
-Imprescindible ponerlo para las citas.
+La IA (\emph{Inteigencia Artificial})~\cite{rouhiainen2018inteligencia} se puede definir como la habilidad de los ordenadores para hacer actividades que normalmente requieren inteligencia humana. Aunque de forma más técnica se puede definir como la capacidad de las máquinas para usar algoritmos, aprender de los datos y utilizar lo aprendido en la toma de decisiones como si se tratase de un humano.
 
-Citar es importantísimo en textos científico-técnicos. 
-Porque no partimos de cero.
-Es más, partir de cero es de tontos; lo suyo es aprovecharse de lo ya existente para construir encima y hacer cosas más sofisticadas.
-¿Dónde puedo encontrar textos científicos que referenciar?
-Un buen sitio es Google Scholar\footnote{\url{http://scholar.google.com}}.
-Por ejemplo, si buscas por ``stigmergy libre software'' para encontrar trabajo sobre software libre y el concepto de \emph{estigmergia} (¿te he comentado que me gusta el concepto de estigmergia ya?), encontrarás un artículo que escribí hace tiempo cuyo título es ``Self-organized development in libre software: a model based on the stigmergy concept''.
-Si pulsas sobre las comillas dobles (entre la estrella y el ``citado por ...'', justo debajo del extracto del resumen del artículo, te saldrá una ventana emergente con cómo citar.
-Abajo a la derecha, aparece un enlace BibTeX.
-Púlsalo y encontrarás la referencia en formato BibTeX, tal que así:
+El uso de la IA cada vez es mayor, ya que nos ayuda a beneficiarnos de mejoras significativas y disfrutar de una mayor eficiencia en casi todos los ámbitos de la vida. Pero debemos estar atentos para prevenir y analizar las posibles desventajas directas o indirectas que pueda generar el crecimiento del uso de la IA. La IA se puede aplicar a una inmensidad de situaciones, algunas de ellas son las siguientes:
 
-{\footnotesize
-\begin{verbatim}
-@inproceedings{robles2005self,
-  title={Self-organized development in libre software:
-         a model based on the stigmergy concept},
-  author={Robles, Gregorio and Merelo, Juan Juli\'an 
-          and Gonz\'alez-Barahona, Jes\'us M.},
-  booktitle={ProSim'05},
-  year={2005}
-}
-\end{verbatim}
-}
+\begin{itemize}
 
-Copia el texto en BibTeX y pégalo en el fichero \texttt{memoria.bib}, que es donde están las referencias bibliográficas.
-Para incluir la referencia en el texto de la memoria, deberás citarlo, como hemos hecho antes con~\cite{bonabeau:_swarm}, lo que pasa es que en vez de el identificador de la cita anterior (bonabeau:\_swarm), tendrás que poner el nuevo (robles2005self).
-Compila el fichero \texttt{memoria.tex} (\texttt{pdflatex memoria.tex}), añade la bibliografía (\texttt{bibtex memoria.aux}) y vuelve a compilar \texttt{memoria.tex} (\texttt{pdflatex memoria.tex})\ldots y \emph{voilà} ¡tenemos una nueva cita~\cite{robles2005self}!
+    \item[•] Cambiará la forma de hacer negocios debido a que las empresas que busquen entender y aplicar estas herramientas de forma rápida y eficaz obtendrán ventajas competitivas. Por ejemplo, mejoras del desempeño de la estrategia algorítmica comercial o detección y clasificación de objetos.
+    
+	\item[•] La IA será capaz de ofrecernos sugerencias y predicciones relacionadas con temas importantes de nuestra vida, esto supondrá un impacto en áreas como la salud, el bienestar, la educación, el trabajo y las relaciones interpersonales. Por ejemplo, el procesamiento eficiente y escalable de datos de pacientes implicará que la atención médica sea
+más efectiva y eficiente. 
 
-También existe la posibilidad de poner notas al pie de página, por ejemplo, una para indicarte que visite la página del GSyC\footnote{\url{http://gsyc.es}}.
+	\item[•] Permitirá que las máquinas y los robots realicen tareas que los humanos consideran difíciles, aburridas o peligrosas. Además que las máquinas no necesitan descansar y pueden analizar grandes volúmenes de información a la vez y con un porcentaje de error menor que los humanos.
+	
+\end{itemize}
 
-Hemos hablado de cómo incluir figuras.
-Pero no hemos dicho nada de tablas.
-A mí me gustan las tablas.
-Mucho.
-Aquí un ejemplo de tabla, la Tabla~\ref{tabla:ejemplo} (siento ser pesado, pero nota cómo he puesto la referencia).
+\section{Machine Learning} 
+\label{sec:MachineLearning}
+El machine learning o aprendizaje automático~\cite{rouhiainen2018inteligencia}  es uno de los enfoques fundamentales de la inteligencia artificial. Se trata un elemento de la informática en el que los ordenadores o las máquinas tienen la capacidad de aprender sin estar programados para ello. El aprendizaje automático usa algoritmos para aprender de los patrones de datos. Un ejemplo es la personalización de los sitios de medios sociales como Facebook o los resultados del motor de
+búsqueda de Google. Otro ejemplo son  los filtros de Spam en el correo electronico. Aprenden en base a unos patrones que tipo de mensajes son correo basura y cuales no y toman la decision de clasificarlos como tal o no.
 
-\begin{table}
- \begin{center}
-  \begin{tabular}{ | l | c | r |} % tenemos tres colummnas, la primera alineada a la izquierda (l), la segunda al centro (c) y la tercera a la derecha (r). El | indica que entre las columnas habrá una línea separadora.
-    \hline
-    Uno & 2 & 3 \\ \hline % el hline nos da una línea vertical
-    Cuatro & 5 & 6 \\ \hline
-    Siete & 8 & 9 \\
-    \hline
-  \end{tabular}
-  \label{tabla:ejemplo}
-  \caption{Ejemplo de tabla. Aquí viene una pequeña descripción (el \emph{caption}) del contenido de la tabla. Si la tabla no es autoexplicativa, siempre viene bien aclararla aquí.}
- \end{center}
-\end{table}
+En el aprendizaje automático se diferencian tres tipos de aprendizaje:
+
+\begin{itemize}
+
+	\item[•] \textbf{Aprendizaje supervisado:} es el humano quien tiene que suministrar datos etiquetados y organizados para indicar cómo tendría que ser categorizada la nueva información o entrada. Por ejemplo, enseñar previamente al algoritmo fotos donde aparezca un perro para que luego pueda identificar imágenes similares. Es el tipo de aprendizaje utilizado en LearningML.
+	
+	\item[•] \textbf{Aprendizaje no supervisado:} es el algoritmo el que tiene que encontrar la forma de asignar a los datos una etiqueta sin información previa, de manera que no precisa de la intervención de un humano.
+	
+	\item[•] \textbf{Aprendizaje por refuerzo:} el algoritmo aprende de la experiencia. Cuando el algoritmo acierta al clasificar una entrada recibe un refuerzo positivo y de esta forma mejora con el uso.
+	
+\end{itemize}
+
+\section{LearningML} 
+\label{sec:LearningML}
+
 
 \section{Angular} 
 \label{sec:Angular}
 
-Angular~\cite{Pagina_de_angular}\cite{Curso_angular} es un \emph{framework} de código abierto desarrollado por Google que mediante el uso de TypeScript y HTML permite crear aplicaciones de una sola página, denominadas SPA (\emph{Single Page Application}).
+Angular~\cite{Pagina_de_angular, Curso_de_angular} nació en 2010 con el nombre de AngularJS pero en el año 2016 pasó a llamarse Angular, en su versión 2.0 y ha ido evolucionando e implantando mejoras. La última versión es la 13 publicada en noviembre de 2021.
+
+Angular es un \emph{framework} de código abierto desarrollado por Google que mediante el uso de TypeScript y HTML permite crear aplicaciones de una sola página, denominadas SPA (\emph{Single Page Application}).
 
 Las ventajas que tiene Angular es que mantiene la aplicación más ordenada, simplifica el codigo y evita escribir código repetitivo gracias a que sigue un modelo MVC (\emph{Modelo-Vista-Controlador}), a la vez que posibilita que las modificaciones y las actualizaciones de las aplicaciones sean rápidas y sencillas. Además separa el \emph{frontend} y el \emph{backend} en la aplicación.
 
-La principal ventaja que tienen las SPA es que aunque la velocidad de carga es un poco lenta la primera vez que se abre, después tiene una alta velocidad de carga entre las vistas que tiene la aplicación web, ya que cuando hay un cambio de vista no se recarga la página si no que las vistas se cargan de forma rápida, dinámica y reactiva. Esto se debe a que solamente hay una petición inicial al servidor y una respuesta HTML del mismo, luego funciona mediante routing. 
+La principal ventaja que tienen las SPA es que tiene una alta velocidad de carga entre las vistas que tiene la aplicación web, ya que cuando hay un cambio de vista no se recarga la página si no que las vistas se cargan de forma rápida, dinámica y reactiva. Esto se debe a que solamente hay una petición inicial al servidor y una respuesta HTML del mismo, luego funciona mediante routing.
+
+Como cualquier \emph{framework}, Angular tiene una serie de librerías que podemos
+importar para facilitar el desarrollo del código, o para solucionar problemas
+concretos. Las librerías amplían las funcionalidades.
+
+La arquitectura de una aplicación Angular está basada en cuatro clases distintas, que se identifican a través de decoradores. Estos decoradores definen su tipo y proporcionan metadatos que le indican a Angular cómo usarlos.
+Las cuatro clases que utiliza son:
+
+\begin{itemize}
+
+	\item[•] \textbf{Módulos:} declaran un contexto de compilación para un conjunto de componentes. Los módulos juegan un papel fundamental en la estructuración de las aplicaciones Angular. Es donde se definen o declaran los componentes, las directivas y los sevicios que conforman la aplicación. De manera que representa una agrupación lógica de lo que podríamos llamar áreas funcionales de una aplicación. También definen las rutas que establecen las vistas de la aplicación y las dependencias con otros módulos, es decir, que módulos necesita importar y que componentes o directivas exporta. 
+	
+	Cualquier aplicación de Angular tiene un módulo raiz, llamado \texttt{AppModule}, que proporciona el mecanismo de arranque que inicia la aplicación, pero no es el único, normalmente una aplicación contiene varios módulos funcionales, además de los propios del \emph{framework}. 
+	
+	Los módulos de Angular pueden importar o exportar funcionalidades de otros módulos, esto hace que cada módulo sea independiente. La organización en distintos módulos ayuda a gestionar el desarrollo de aplicaciones complejas y a la reutilización de código.
+	
+	Para definir una clase como módulo se utiliza el decorador \texttt{@NgModule}.
+	
+	\item[•] \textbf{Componentes:} son los bloques de construcción que componen una aplicación, contienen la lógica y los datos de la aplicación. Cada componente tiene asociada una plantilla HTML. Las plantillas son las vistas que conforman la interfaz de usuario y se cargan cuando se cambia o modifica la URL.
+	
+	Una aplicación de Angular tiene al menos el componente raiz, llamado \texttt{AppComponent}, que conecta una jerarquía de componentes con el modelo de objeto del documento (DOM) de la página.
+	
+	Los componentes pueden tener uno o varios subcomponentes, estos pueden relacionarse entre sí de dos formas. Mediante eventos para actualizar datos cuando el usuario interacciona con la interfaz grafica y mediante las propiedades o interpolación para enviar datos a las plantillas que conforman las vistas. Esto hace que los cambios en el DOM pueden modificar los datos de la aplicación y los datos de la aplicación pueden modificar las plantillas.
+	
+	Para definir una clase como componente se utiliza el decorador \texttt{@NgComponent}.
+	
+	\item[•] \textbf{Directivas:} son clases que agregan comportamiento adicional a los elementos en sus aplicaciones Angular para modificar de alguna manera el HTML. Antes de que se muestre una vista, Angular evalúa las directivas y resuelve la sintaxis vinculante en la plantilla para modificar los elementos HTML y el DOM.
+	
+	Hay tres tipos de directivas:
+	
+	\begin{itemize}
+	\item[*] Directivas de componente: los componentes son un tipo de directiva.
+	\item[*] Directivas de atributos: modifican el comportamiento o la apariencia de un elemento, componente o directiva.
+	\item[*] Directivas estructuales: modifican la apariencia agregando y eliminando elementos del DOM.
+	\end{itemize}
+	
+	Se pueden crear directivas o Angular dispone de directivas integradas que se pueden usar para administrar formularios, listas, estilos y lo que ven los usuarios. Algunos ejemplos de directivas de atributos integradas son \texttt{NgClass}, \texttt{NgStyle} y \texttt{NgModel}, y de directivas estructurales \texttt{NgIf}, \texttt{NgFor} y \texttt{NgSwitch}.
+	
+	\item[•] \textbf{Servicios:} proporcionan una funcionalidad específica que no está directamente relacionada con las vistas. Son clases con un propósito limitado y bien definido, deben hacer algo específico y de uso general. Se usan para cambiar datos entre componentes, obtener datos del servidor, validar la entrada del usuario o cualquier servicio que se repita en distintas componentes.
+	
+	Angular distingue los componentes de los servicios para aumentar la modularidad y la reutilización. Al separar la funcionalidad relacionada con la vista de un componente de otros tipos de procesamiento, puede hacer que sus clases de componentes sean sencillas y eficientes.
+	
+	Para definir una clase como servicio se utiliza el decorador \texttt{@Injectable},ya que proporciona los metadatos que permiten inyectar otros proveedores como dependencias en su clase.
+	
+\end{itemize}
 
 
+\subsection{Angular CLI}
+\label{subsec:Angular CLI}
+
+Angular CLI (\emph{Command Line Interface})~\cite{Pagina_de_angular_CLI} es una herramienta de interfaz de línea de comandos desarrollada por Angular que se utiliza para inicializar, desarrollar, montar y mantener aplicaciones de Angular directamente desde un shell de comandos. 
+
+Es una herramienta que facilita el inicio de una aplicación de Angular, porque con una instrucción \texttt{ngnew}, crea una carpeta de trabajo y genera el esqueleto de aplicación. También tiene instrucciones que permiten crear nuevas clases de forma sencilla, creando los distintos archivos que forman un módulo, componente, servicio o una directiva, además de incluirlos en los archivos necesrios y crear las dependencias. Las herramientas predefinidas más destacadas son el servidor web, el compilador y el sistema de testing.
+
+
+\subsection{MVC}
+\label{subsec:MVC}
+
+Para el desarrollo de una aplicación web Angular utiliza el patrón MVC (\emph{Modelo-Vista-Controlador})~\cite{Pagina_MVC} que se utiliza para separar en tres componentes los datos, la metodología y la interfaz gráfica de una aplicación, lo que permite modificar cada uno de ellos sin tener que modificar los demas. La arquitectura MVC está formada por tres componentes, que son:
+	\begin{itemize}
+	\item[•] \textbf{Modelo:} es el encargado de la manipulación, gestión y actualización de los datos. En el caso de que haya una base de datos es donde se realizan las consultas, busquedas o actualizaciones.  
+	
+	\item[•] \textbf{Vista:} es la representación gráfica de los datos proporcionados por el controlador. Ni el controlador ni el modelo se preocupan de cómo se verán los datos, toda la parte del diseño de la interfaz es responsabilidad de la vista.
+	
+	\item[•] \textbf{Controlador:} es el componente principal, se encarga de gestionar las instrucciones que se reciben del usuario, atenderlas y procesarlas. Después realiza las consultas al modelo y una vez se hayan obtenido dichos datos, se envía a la vista para producir una salida como respuesta a el evento.
+	\end{itemize}
+	
+Las ventajas que aporta esta arquitectura son:facilita el mantenimiento, permite la reutilización de componentes y mejora la escalabilidad, ya que separa cada tipo de lógica.
+
+
+\section{HTML5} 
+\label{sec:HTML5}
+
+HTML (\emph{HyperText Markup Language})~\cite{Pagina_HTML, Historia_HTML5, gauchat2012gran} es un lenguaje de marcado que se utiliza para definir la estructura y el contenido de una página Web, y es el componente más básico de una web. Se escribe en texto plano y tiene una estructura de árbol de elementos y textos. La estructura básica de un documento HTML se compone de los siguientes elementos: \texttt{<!DOCTYPE>}, \texttt{<html>}, \texttt{<head>} y \texttt{<body>}. HTML provee los elementos estructurales y se complemeta con CSS para modificar la apariencia de la pagina y con JavaScript para proveer dinamismo y construir aplicaciones web completamente funcionales. 
+
+La idea de desarrollar HTML5 nació en 2004, cuando el consorcio W3C (\emph{World Wide Web Consortium})  que está a cargo del estandar deció dejar de evolucionar HTML, por lo que la asociación WHATWG (\emph{Web HyperText Application Technology Working Group}), formada por Apple, Opera y Mozilla, decidió crear HTML5 y publicó el primer borrador de HTML5. En el año 2007 W3C formó un grupo de trabajo autorizado para trabajar con WHATWG en el desarrollo de HTML5, pero en 2011 se separaron debido a que tenían distintos objetivos, W3C quería publicar una version terminada, mientras que WHATWG quería seguir trabajando en una constante evolución de HTML5. En 2019, WHATWG y W3C firmaron un acuerdo para colaborar en una única versión de HTML en el futuro.
+
+Fue creado con la intención de hacerlo más eficiente que las versiones anteriores, mantener la compatibilidad con versiones anteriores y facilitar el desarrollo web compatible con distintos navegadores. Las principales novedades de HTML5 son:
+
+	\begin{itemize}
+	\item[•] Incorpora nuevas etiquetas que permiten una mejor estructuración de los documentos HTML, ya que antes solo estaba el \texttt{<div>} para definir secciones. Ahora se pueden utilizar también \texttt{<header>} para la cabecera, \texttt{<section>} para la información principal, \texttt{<nav>} para la barra de navegación y \texttt{<footer>} para el pie, entre otros.
+	\item[•] Permite incorporar elementos multimedia para reproducir audios y videos desde el propio navegador, con las etiquetas \texttt{<audio>} y \texttt{<video>}.
+	\item[•] Incluye numerosas APIs, algunas de ellas son:
+		\begin{itemize}
+		\item[*] Forms: incluye mejoras en los formularios para personalizar todos los aspectos de procesamiento y validación.
+		\item[*] Canvas: permite dibujar, presentar gráficos en pantalla, animar y procesar imágenes y texto.
+		\item[*] Geolocation: permite a los desarrolladores determinar la ubicación física real del usuario y e mostrar e interactuar con un mapa de Google Maps.
+		\item[*] Drag and drop: permite arrastrar un elemento desde un lugar y luego soltarlo en otro.
+		\item[*] Web Storage: es una mejora de las cookies y permite el almacenamiento local en el lado del cliente, con \texttt{localStorage} cuando la información tiene que estar disponible solo durante la sesión y \texttt{sessionStorage} cuando tiene que ser preservada todo el tiempo que el usuario desee
+		\end{itemize}
+	\end{itemize}
+
+
+\section{CSS3} 
+\label{sec:CSS3}
+
+
+\section{TypeScript} 
+\label{sec:TypeScript}
+
+TypeScript~\cite{Pagina_de_typescript} es un lenguaje de programación de código abierto desarrollado y mantenido por Microsoft. Es un superconjunto de JavaScript, es decir, amplía JavaScript con una nueva sintaxis que añade tipos estáticos y objetos basados en clases. Nació en 2012 como solución para el desarrollo de aplicaciones a gran escala, ya que con JavaScript era muy complicado. Los programas de JavaScript son compatibles en TypeScript, por lo que se puede integrar en proyectos ya existentes porque a través de un compilador de TypeScript se traducen a código JavaScript original. Los cambios más importantes respecto a JavaScript son:
+
+	Evita errores en tiempo de ejecución, ya que incorpora el tipado estático, es decir, al crear variables se puede añadir el tipo de dato. 
+	
+	Al añadir objetos basados en clases hace que la programación orientada a objetos sea más sencilla, esto implica que sea más funcional.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
