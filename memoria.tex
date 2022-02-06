@@ -373,7 +373,7 @@ más efectiva y eficiente.
 
 \section{Machine Learning} 
 \label{sec:MachineLearning}
-El machine learning o aprendizaje automático~\cite{rouhiainen2018inteligencia}  es uno de los enfoques fundamentales de la inteligencia artificial. Se trata un elemento de la informática en el que los ordenadores o las máquinas tienen la capacidad de aprender sin estar programados para ello. El aprendizaje automático usa algoritmos para aprender de los patrones de datos. Un ejemplo es la personalización de los sitios de medios sociales como Facebook o los resultados del motor de
+El machine learning o aprendizaje automático~\cite{rouhiainen2018inteligencia}  es uno de los enfoques fundamentales de la inteligencia artificial. Trata un elemento de la informática en el que los ordenadores o las máquinas tienen la capacidad de aprender sin estar programados para ello. El aprendizaje automático usa algoritmos para aprender de diferentes patrones de datos, es decir, es un conjunto de algoritmos con los que se construyen modelos de predicción y clasificación a partir de conjuntos de datos. Un ejemplo es la personalización de los sitios de medios sociales como Facebook o los resultados del motor de
 búsqueda de Google. Otro ejemplo son  los filtros de Spam en el correo electronico. Aprenden en base a unos patrones que tipo de mensajes son correo basura y cuales no y toman la decision de clasificarlos como tal o no.
 
 En el aprendizaje automático se diferencian tres tipos de aprendizaje:
@@ -391,6 +391,12 @@ En el aprendizaje automático se diferencian tres tipos de aprendizaje:
 \section{LearningML} 
 \label{sec:LearningML}
 
+LearningML~\cite{Pagina_de_LearningML} es una aplicación web creada por Juan David Rodríguez García en 2020, pero fué en 2019 cuando al autor decidió crear LearningML al participar en la confección de un recurso educativo\footnote{\url{https://code.intef.es/prop_didacticas/inteligencia-artificial-en-el-aula-con-scratch-3-0}}  sobre la enseñanza del aprendizaje automático en la escuela. La idea de crear LearningML surge porque la mayoría de las plataformas educativas de programación existentes carecen de algunas características necesarias para desarrollar proyectos completos de IA.
+
+La aplicación web consiste en facilitar la enseñanza de contenidos sobre el aprendizaje automático y el fomento del pensamiento computacional a alumnos de edades comprendidas entre los 10 y los 16 años. Para comprobar si era una 
+herramienta válida para enseñar, aprender machine learning y de uso sencillo se llevó a cabo una investigación\footnote{\url{https://web.learningml.org/investigacion-sobre-learningml/}} que resultó satisfactoria. En la actualidad, es una herramienta que está siendo utilizada en ambientes educativos reales.
+
+Hoy en día LearningML dispone de dos funcionalidades básicas, reconocimiento de textos y reconocimiento de imágenes. Además cuenta con una amplia traducción a distintos idiomas.
 
 \section{Angular} 
 \label{sec:Angular}
@@ -498,15 +504,62 @@ Fue creado con la intención de hacerlo más eficiente que las versiones anterio
 \section{CSS3} 
 \label{sec:CSS3}
 
+CSS3 (\emph{Cascading Style Sheets})~\cite{gauchat2012gran} es la última versión de CSS. Es un lenguaje de diseño gráfico que permite definir y crear el aspecto visual de los documentos HTML. Es un complemento desarrollado para superar las limitaciones y reducir la complejidad de HTML, por lo que se separa el estilo del documento de la estructura y el contenido de este. Esta separación permite que varios documentos HTML tengan la misma hoja de estilo, simplificando el trabajo de los desarrolladores, o que un mismo documento HTML pueda tener distintos estilos, permitiendo variaciones en la visualización para diferentes dispositivos y tamaños de pantalla.
+
+El consorcio W3C es el encargado de definir y mantener las especificaciones de este lenguaje. Las principales novedades de CSS3 son: esquinas redondeadas, sombras en cajas y textos, elegir la fuente del texto, gradientes, opacidad y transparencia de los colores, incluir transiciones, entre otras.
 
 \section{TypeScript} 
 \label{sec:TypeScript}
 
-TypeScript~\cite{Pagina_de_typescript} es un lenguaje de programación de código abierto desarrollado y mantenido por Microsoft. Es un superconjunto de JavaScript, es decir, amplía JavaScript con una nueva sintaxis que añade tipos estáticos y objetos basados en clases. Nació en 2012 como solución para el desarrollo de aplicaciones a gran escala, ya que con JavaScript era muy complicado. Los programas de JavaScript son compatibles en TypeScript, por lo que se puede integrar en proyectos ya existentes porque a través de un compilador de TypeScript se traducen a código JavaScript original. Los cambios más importantes respecto a JavaScript son:
+TypeScript~\cite{Pagina_de_typescript} es un lenguaje de programación de código abierto desarrollado y mantenido por Microsoft. Es un superconjunto de JavaScript, es decir, amplía JavaScript con una nueva sintaxis que añade tipos estáticos y objetos basados en clases. Nació en 2012 como solución para el desarrollo de aplicaciones  robustas y de gran tamano, ya que con JavaScript era muy complicado debido a su escasa escalabilidad. Su uso está permitido tanto en el lado del cliente como en el lado del servidor con Node.js
 
-	Evita errores en tiempo de ejecución, ya que incorpora el tipado estático, es decir, al crear variables se puede añadir el tipo de dato. 
+ Los programas de JavaScript son compatibles en TypeScript, por lo que se puede integrar en proyectos ya existentes porque a través de un compilador de TypeScript se traducen a código JavaScript original. Además tiene las herramientas de JavaScript ES6 y JavaScript ES7, de esta manera se mantiene actualizado con las últimas mejoras de JavaScript. Los cambios más importantes respecto a JavaScript son:
+
+\begin{itemize}
+	\item[•] Evita errores en tiempo de ejecución, ya que incorpora el tipado estático, es decir, al crear variables se puede añadir el tipo de dato.
 	
-	Al añadir objetos basados en clases hace que la programación orientada a objetos sea más sencilla, esto implica que sea más funcional.
+	\item[•] Es más funcional, ya que al añadir objetos basados en clases hace que la programación orientada a objetos sea más sencilla
+\end{itemize}
+
+En la actualidad se encuentra en la versión 2.0 que introduce varias características, entre ellas la capacidad de evitar la asignación de variables con un valor nulo. 
+
+\section{Node.js} 
+\label{sec:Node}
+
+Node.js~\cite{Pagina_de_Node} fue creado por Ryan Dahl en 2009. Es un entorno en tiempo de ejecución de JavaScript orientado a eventos asíncronos, diseñado para construir aplicaciones de red escalables, como por ejemplo, servidores web. Está influenciado por sistemas como Event Machine de Ruby y Twisted de Python.
+
+Con Node.js el código JavaScript, no se ejecuta en un navegador, sino en el servidor. Utiliza el motor V8 de Google para interpretar y ejecutar el código JavaScript, suministrando un entorno de ejecución en el lado del servidor. Del mismo modo que hace el navegador cuando se utiliza JavaScript en el lado del cliente.
+
+Al estar orientado a eventos asíncronos puede soportar una gran cantidad de conexiones. Esto lo diferencia del modelo de concurrencia más común, en el que se emplean hilos del Sistema Operativo que usan un hilo por cada conexión, lo que provoca que si se tienen muchas conexiones son necesarios muchos servidores. Node.js utiliza un único hilo de ejecución y un bucle de eventos asíncrono, tratando las nuevas conexiones como un nuevo evento dentro del bucle y cada conexión recibe una pequeña asignación de espacio de memoria dinámico, sin tener que crear un hilo de ejecución, evitando que se produzcan bloqueos en el flujo de trabajo. 
+
+Node.js utiliza un único hilo de ejecución y un bucle de eventos asíncrono, tratando las nuevas conexiones como un nuevo evento dentro del bucle y cada conexión recibe una pequeña asignación de espacio de memoria dinámico, sin tener que crear un hilo de ejecución, de esta manera evita que se produzcan bloqueos en el flujo de trabajo y permite soportar una gran cantidad de conexiones. Esto lo diferencia del modelo de concurrencia más común, en el que se emplean hilos del Sistema Operativo que usan un hilo por cada conexión, lo que provoca que si se tienen muchas conexiones son necesarios muchos servidores.
+
+\section{TensorFlow} 
+\label{sec:TensorFlow}
+
+TensorFlow~\cite{Pagina_de_TensorFlow} es el sistema de aprendizaje automático de segunda generación de Google Brain, liberado como software de código abierto en 2015, por lo que el acceso a esta herramienta es libre y es posible editarla en función de las necesidades. 
+
+Es una plataforma para construir y entrenar redes neuronales para detectar y descifrar patrones y correlaciones, parecidos al aprendizaje y razonamiento usados por los humanos. Tiene un ecosistema integral y flexible de herramientas , bibliotecas y recursos de la comunidad que permite a los desarrolladores crear e implementar fácilmente aplicaciones basadas en ML.
+
+
+\section{JSON} 
+\label{sec:JSON}
+
+JSON (\emph{JavaScript Object Notation})~\cite{Pagina_de_JSON} es un formato ligero de intercambio de datos. Es fácil de leer y escribir para los humanos, mientras que para las máquinas es sencillo de interpretar y generar. A pesar de que está basado en un subconjunto del lenguaje de programación JavaScript, es un formato de texto completamente independiente del lenguaje. JSON está construído por dos estructuras:
+
+\begin{itemize}
+	\item[•] Objeto: colección de pares de nombre/valor. Comienza con una llave de apertura y termina con una llave de cierre, cada nombre es seguido de dos puntos y los pares nombre/valor están separados por una coma.
+	\item[•] Array: lista ordenada de valores. Comienza con un corchete izquierdo y termina con un corchete derecho, los valores se separan por comas.
+\end{itemize}
+
+Estas estructuras pueden anidarse y los valores pueden ser:
+	\begin{itemize}
+		\item[•] Cadena de caracteres. Se ponen entre comillas dobles.
+		\item[•] Números. Pueden contener parte fraccional separada por un punto y se permiten números negativos.
+		\item[•] Booleanos. True y false.
+		\item[•] Null. Representa el valor nulo.
+	\end{itemize}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
