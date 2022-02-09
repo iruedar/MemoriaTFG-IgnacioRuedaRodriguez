@@ -65,7 +65,7 @@ Trabajo Fin de Grado
 \vspace{2.5cm}
 
 \LARGE
-IMPLEMENTACIÓN DE FUNCIONALIDADES EN LEARNINGML: RECONOCIMIENTO DE BASES DE DATOS
+IMPLEMENTACIÓN DE FUNCIONALIDADES EN LEARNINGML: RECONOCIMIENTO DE CONJUNTOS DE DATOS (DATASETS)
 
 \vspace{3cm}
 
@@ -94,7 +94,7 @@ Co-tutor : Juan David Rodríguez García
 
 \vspace{1cm}
 \large
-Implementación de Funcionalidades en LearningML: Reconocimiento de Bases de Datos
+Implementación de Funcionalidades en LearningML: Reconocimiento de Conjuntos de Datos (Datasets)
 
 \vspace{1cm}
 \large
@@ -568,15 +568,64 @@ Estas estructuras pueden anidarse y los valores pueden ser:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \cleardoublepage
-\chapter{Diseño e implementación}
+\chapter{Diseño e implementación} 
+
+\section{Arquitectura de LearningML} 
+\label{sec:arquitectura}
+
+La arquitectura de LearningML está construida con Angular, por lo que está compuesta por módulos, componentes y servicios, de manera que es sencillo realizar cambios o añadir funcionalidades. 
+
+En la figura~\ref{fig:arquitectura} se puede ver la arquitectura general de LearningML, primero está el servicio \texttt{labeled-data-manager}, es de uso general y lo importan la mayoría de componentes y algunos sevicios, ya que se encarga de guardar  algunos datos que necesitan los servicios y componentes. Luego está el componente \texttt{ml-home} que se corresponde con la página inicial y es donde se selecciona que tipo de reconocimiento se desea realizar, reconocimiento de textos o de imagenes. Una vez se ha seleccionado se pasa al componente \texttt{ml-model} mediante routing con el modelo \texttt{app-routing} que funciona mediante rutas, por lo que además de cambiar de componente también se cambia de página. En función del reconocimiento escogido se mostrarán unos elementos u otros del HTML de \texttt{ml-model}.
+
+En el componente \texttt{ml-model} se importan los servicios \texttt{feature-extraction} y \texttt{ml-algorithm}, que a su vez el primero importa dos servicios: \texttt{feature-extractor-text} y \texttt{feature-extractor-
+image} y el segundo importa otros dos servicios: \texttt{ml-algorithm-knn} y \texttt{ml-algorithm-
+neural-networks}.
+
+El componente \texttt{ml-model} es el contructor del modelo y está dividido en tres secciones, la primera es donde se introducen los datos de entrenamiento, primero se introducen las distintas clases a las que puede pertenecer una entrada y una vez se ha introducido al menos una clase, entra en funcionamiento el componente \texttt{ml-label-container} que es donde se recogen las entradas de cada clase con los datos que se utilizan en la segunda sección, la parte de aprendizaje. \\
+En la parte de aprendizaje es donde se utiliza la función \texttt{train} que es donde realmente se realiza la construcción del modelo y se entrena, primero se realiza la extracción de características mediante el servicio \texttt{feature-extraction} y este es el que elige dependiendo del tipo de dato cual de los dos servicios usar para la extracción de características. Después llama a \texttt{ml-algorithm} y este servicio decide que algoritmo utilizar para construir y entrenar el modelo para el reconocimiento. Por defecto utiliza el algoritmo \texttt{ml-algorithm-neural-networks}, pero se puede seleccionar el modo avanzado en el cual se puede elegir entre los dos y modificar los parámetros del algoritmo.\\
+Cuando el modelo ya está entrenado se pasa a la tercera sección, la parte de testeo, que es donde se realizan las pruebas de reconocimiento. En función del reconocimiento escogido se hace uso del componente \texttt{ml-test-text-model} o del componente \texttt{ml-test-image-model}. Primero llaman a \texttt{feature-extraction} y después a \texttt{ml-algorithm}, igual que \texttt{ml-model}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/arquitectura.png}
+	\caption{Arquitectura general de \texttt{LearningML}. En rojo los servicios, en verde los componentes, en amarillo las funciones y en azul las variables.} \label{fig:arquitectura}
+\end{figure}
+
+En la figura~\ref{fig:arquitectura} también se puede observar que contiene principalmente cada servicio nombrado anteriormente. Estos servicios tienen un desempeño específico:
+
+\begin{itemize}
+	\item[•] labeled-data-manager: es el encargado de guardar datos, estos datos son características que definen el modelo. Guarda las etiquetas, es decir, las clases a las que puede pertenecer una entrada, esto se hace con la función \texttt{addLabel} que guarda las etiquetas en un array llamado  \texttt{labels} y en un objeto Map llamado \texttt{labelsWithData}. Guarda los datos de entrada, ya sean textos o imágenes, con la función \texttt{addEntry} que los guarda en el objeto \texttt{labelsWithData} junto con la etiqueta de la clase en la que ha sido añadida la entrada para así tener cada etiqueta con sus datos. Guarda el tipo de modelo que se va a construir, es decir, el tipo de reconocimiento selecionado, en la variable \texttt{modelType}. También guarda el tipo de algoritmo en la variable \texttt{mlAlgorithm}. Además de guardar estos datos también borra etiquetas o entradas y se encarga de guardar o cargar los datos de un JSON tanto del ordenador como de la nube si el usuario está registrado.
+	
+	\item[•] feature-extraction: es el encargado de llamar a los otros dos servicios en función de si se quieren extraer características de un texto o de una imagen mediante la función \texttt{extractDatasetFeatures}.
+	
+	\begin{itemize}
+		\item[*] feature-extractor-text: es el encargado de extraer las características de los textos, es decir, convertir un texto en un tensor. La función que lo convierte en un tensor es \texttt{extractInstanceFeatures}
+		
+		\item[*] feature-extractor-image: es el encargado de extraer las características de las imágenes, es decir, convertir una imagen en un tensor. La función que lo convierte en un tensor es \texttt{extractInstanceFeatures} al igual que en el caso de los textos.
+	\end{itemize}
+	
+	\item[•] ml-algorithm: es el encargado de llamar a los otros dos servicios en función del algoritmo que se utilice. Tiene dos funciones principales, \texttt{train} y \texttt{classify} con las que llama a los otros servicios para entrenar o clasificar.
+	
+	\begin{itemize}
+		\item[*] ml-algoithm-knn: se usa en caso de que el algoritmo elegido sea K-NN. Tiene dos funciones que son las que llama el servicio \texttt{ml-algorithm}, \texttt{train} para entrenar o \texttt{classify} para clasificar.
+		\item[*] ml-algorithm-neural-networks: tiene las mismas funciones que K-NN pero en este caso entrena o evalúa utilizando el algoritmo de redes neuronales.
+	\end{itemize}
+\end{itemize}
+
+\section{Cambios en la arquitectura de LearningML} 
+\label{sec:arquitectura nueva}
+
+Realizar cambios en la arquitectura no fue complicado, ya que la aplicación está hecha para poder realizar cambios e implementar nuevas funcionalidades. Solo hay que entender como esta estructurada y que es lo que hace cada parte.
+
+Para añadir la nueva funcionalidad tenía dos opciones en cuanto a la construcción del modelo: crear un nuevo componente o añadir la funcionalidad en el componente \texttt{ml-model}, me decidí por la segunda para seguir con la misma estructura, ya que no había un componente diferente para construir el modelo de textos y otro para imágenes, por lo que me parecía más lógico seguir con la misma dinámica.
+
+
+
 
 Aquí viene todo lo que has hecho tú (tecnológicamente). 
 Puedes entrar hasta el detalle. 
 Es la parte más importante de la memoria, porque describe lo que has hecho tú.
 Eso sí, normalmente aconsejo no poner código, sino diagramas.
-
-\section{Arquitectura general} 
-\label{sec:arquitectura}
 
 Si tu proyecto es un software, siempre es bueno poner la arquitectura (que es cómo se estructura tu programa a ``vista de pájaro'').
 
@@ -586,14 +635,9 @@ Y eso quiere decir que quizás no lo haga donde lo hemos puesto\ldots
 Eso no es malo.
 A veces queda un poco raro, pero es la filosofía de \LaTeX: tú al contenido, que yo me encargo de la maquetación.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=9cm, keepaspectratio]{img/arquitectura.png}
-  \caption{Estructura del parser básico.}\label{fig:arquitectura}
-\end{figure}
 
-\begin{figure}
-    \centering
+\begin{figure}[b!]
+    \centering 
     \includegraphics[bb=0 0 800 600, width=12cm, keepaspectratio]{img/foro1}
     \caption{Página con enlaces a hilos}\label{fig:_arquitectura}
 \end{figure}
