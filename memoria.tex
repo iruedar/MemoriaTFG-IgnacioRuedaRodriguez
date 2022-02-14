@@ -810,7 +810,7 @@ En la figura~\ref{fig:ejemplo1} se puede observar el aspecto que tiene \texttt{l
 
 Una vez se tiene el conjunto de datos creado se procede al entrenamiento del modelo pero para ello hay que hacer la extracción de características, es decir, convertir las muestras de las diferentes clases guardadas en la variable \texttt{labelsWithData} en tensores.
 
-Cuando se pulsa el botón aprender, este llama a la función \texttt{train} de \texttt{ml-model} que crea la variable \texttt{featurePromise} en la cual se llama a la función \texttt{extractDatasetFeatures} del servicio \texttt{featureExtraction} de forma asíncrona para no bloquear la aplicación mientras se extraen las características. 
+Cuando se pulsa el botón aprender, este llama a la función \texttt{train} de \texttt{ml-model} que crea la variable \texttt{featurePromise} en la cual se llama a la función \texttt{extractDatasetFeatures} del servicio \texttt{featureExtraction} de forma asíncrona. 
 Al tratarse de programación asíncrona, se utiliza la función \texttt{then} cuya función consiste en esperar a que la función asíncrona devuelva un valor para después hacer uso de ese valor. 
 En la función \texttt{extractDatasetFeatures} se crea el \texttt{feature-extractor-dataset} ya que el \texttt{modelType} es \emph{dataset} y lo guarda en la variable \texttt{featureExtractor}, se crea llamando a la función \texttt{create} de \texttt{feature-extractor-dataset} a la cual se le pasa como parámetro la variable \texttt{labelsWithData} para que el servicio \texttt{feature-extractor-dataset} guarde los datos de \texttt{labelsWithData}. 
 Después llama a \texttt{extractDatasetFeatures} de \texttt{featureExtractor}.
@@ -864,7 +864,7 @@ Cabe destacar que todas las clases deben tener un número de muestras similar y 
 \section{Conjunto de datos numéricos}
 \label{subsec:numericos}
 
-Para comprobar la clasificación de un conjunto de datos numéricos he utilizado el conjunto de datos de flor iris que se encuentra en el archivo iris.JSON de la carpeta datasets. Este dataset está compuesto de tres clases (iris setosa, iris virginica e iris versicolor) y en cada clase se han añadido 48, 49 y 50 muestras respectivamente. 
+Para comprobar la clasificación de un conjunto de datos numéricos he utilizado el conjunto de datos de flor iris que se encuentra en el archivo \texttt{iris.json} de la carpeta datasets. Este dataset está compuesto de tres clases (iris setosa, iris virginica e iris versicolor) y en cada clase se han añadido 48, 49 y 50 muestras respectivamente. 
 Los atributos de las muestras son longitud de sépalo, ancho de sépalo, longitud de pétalo y ancho de pétalo que son las características que diferencian una flor de otra. 
 En la figura~\ref{fig:ejemplo3} se pueden observar las muestras de las distintas clases.
 
@@ -888,10 +888,10 @@ Hay dos formas de comprobar la validez del modelo con el algoritmo de redes neur
 Por eso según van aumentando las épocas también aumenta el porcentaje de acierto y por consiguiente baja el porcentaje de fallo. Este resultado indica que el aprendizaje se está realizando correctamente.
  \item[•] Con la matriz de confusión que nos indica en forma de tabla los datos que predice y los que son en realidad, es decir, el número de aciertos y de fallos que ha tenido pero no de todas las muestras sino del 25\% que se han usado como ejemplo de validación. 
 En la figura~\ref{fig:ejemplo6} se puede ver un ejemplo de la matriz de confusión que en este caso tiene un 100\% de acierto, ya que de nueve muestras que predice que son de iris setosa las nueve lo son en realidad, de dieciseis muestras que predice que son iris versicolor las dieciseislo son en realidad y de once muestras que predice que son iris virginica las once lo son en realidad.
-Pero no siempre sale el 100\% depende de las muestras que escoja de ejemplo de validación pero habiendo comprobado bastantes veces el fallo es muy bajo, el acierto suele ser superior al 90\% por lo que se puede considerar un porcentaje de acierto optimo.
+Pero no siempre sale el 100\% depende de las muestras que escoja de ejemplo de validación pero habiendo comprobado bastantes veces el fallo es muy bajo, el acierto suele ser superior al 90\% por lo que se puede considerar un porcentaje de acierto óptimo.
  \end{itemize} 
 
-Con los datos obtenidos en la gráfica de evolución de aprendizaje y en la matriz de confusión se puede decir que para un conjunto de datos numéricos el algoritmo de redes neuronales es optimo para su reconocimiento y que las muestras se están recogiendo de la forma correcta y la extracción de características es correcta porque los algoritmos ya estaban creados y funcionaban correctamente pero para ello había que pasarles las características extraidas de las muestras de la forma correcta.
+Con los datos obtenidos en la gráfica de evolución de aprendizaje y en la matriz de confusión se puede decir que para este conjunto de datos numéricos el algoritmo de redes neuronales es óptimo para su reconocimiento y el modelo se crea correctamente, esto imploca que las muestras se están recogiendo de la forma correcta y la extracción de características es correcta porque los algoritmos ya estaban creados y funcionaban correctamente pero para ello había que pasarles las características extraidas de las muestras de la forma correcta.
 
 \begin{figure}
 	\centering
@@ -901,65 +901,234 @@ Con los datos obtenidos en la gráfica de evolución de aprendizaje y en la matr
 
 \begin{figure}
 	\centering
-	\includegraphics[width=9cm, keepaspectratio]{img/le_num_rn.png}
+	\includegraphics[width=10cm, keepaspectratio]{img/le_num_rn.png}
 	\caption{Gráfica de evolución de aprendizaje redes neuronales con datos numéricos} 	\label{fig:ejemplo5}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\includegraphics[width=9cm, keepaspectratio]{img/cm_num_rn.png}
-	\caption{Matriz de confusión redes neuronales con datos numéricos} 	\label{fig:ejemplo6}
+	\includegraphics[width=12cm, keepaspectratio]{img/cm_num_rn.png}
+	\caption{Matriz de confusión redes neuronales con datos numéricos. 25\% ejemplos de validación} 	
+	\label{fig:ejemplo6}
 \end{figure}
 
 Una vez se ha comprobado la validez del modelo, se realizan pruebas en la aplicación con ejemplos de muestras en la parte de testeo para comprobar si realmente clasifica correctamente la muestra introducida. 
 
 Para realizar las pruebas se escogen tres muestras aleatorias del conjunto de datos, una de cada clase:
 \begin{itemize}
-\item[•] Se escoge una muestra de la clase iris setosa, se introduce en la parte de testeo y como resultado se ve que clase se le asigna. En la figura~\ref{fig:ejemplo7} se puede observar el porcentaje de que la muestra evaluada pertenezca a una clase u otra, en este caso ha acertado ya que indica que al 99.5\% pertenece a la clase iris setosa. Se realizan además varias comprobaciones más con muestras de esta clase y las clasifica correctamente.
-\item[•] Se escoge una muestra de la clase iris virginica, en este caso ha acertado ya que indica que al 96.55\% pertenece a la clase iris virgínica como se puede observar en la figura~\ref{fig:ejemplo8}. Se realizan además varias comprobaciones más con muestras de esta clase y las clasifica correctamente.
-\item[•] Se escoge una muestra de la clase iris versicolor, en este caso ha acertado ya que indica que al 96.71\% pertenece a la clase iris versicolor como se puede observar en la figura~\ref{fig:ejemplo9}. Se realizan además varias comprobaciones más con muestras de esta clase y las clasifica correctamente.
+\item[•] Se escoge una muestra de la clase iris setosa, se introduce en la parte de testeo y como resultado se ve que clase se le asigna. En la figura~\ref{fig:ejemplo7} se puede observar el porcentaje de que la muestra evaluada pertenezca a una clase u otra, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 99.5\% pertenece a la clase iris setosa. 
+\item[•] Se escoge una muestra de la clase iris virginica, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 96.55\% pertenece a la clase iris virgínica como se puede observar en la figura~\ref{fig:ejemplo8}.
+\item[•] Se escoge una muestra de la clase iris versicolor, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 96.71\% pertenece a la clase iris versicolor como se puede observar en la figura~\ref{fig:ejemplo9}.
 \end{itemize}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=9cm, keepaspectratio]{img/iris_set_num_rn.png}
-	\caption{Muestra de test de la clase iris setosa} 	\label{fig:ejemplo7}
+	\caption{Muestra de test de la clase iris setosa con redes neuronales} 	\label{fig:ejemplo7}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=9cm, keepaspectratio]{img/iris_vir_num_rn.png}
-	\caption{Gráfica de evolución de aprendizaje redes neuronales con datos numéricos} 	\label{fig:ejemplo8}
+	\caption{Muestra de test de la clase iris virginica con redes neuronales} 	\label{fig:ejemplo8}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=9cm, keepaspectratio]{img/iris_ver_num_rn.png}
-	\caption{Matriz de confusión redes neuronales con datos numéricos} 	\label{fig:ejemplo9}
+	\caption{Muestra de test de la clase iris versicolor con redes neuronales} 	\label{fig:ejemplo9}
+\end{figure}
+
+Se realizan además varias comprobaciones más con muestras de las tres clases y las clasifica correctamente. Pero en la figura~\ref{fig:ejemplo8} que corresponde con la clase iris virginica se puede ver que un pequeño porcentaje lo asigna a la clase iris setosa y en la figura~\ref{fig:ejemplo9} que corresponde con la clase iris setosa se puede ver que un pequeño porcentaje lo asigna a la clase iris virginica, esto sucede porque estas dos clases tienen características similares y en algún caso puede tener un error de clasificación, esto se puede comprobar viendo la matriz de confusión de la figura~\ref{fig:ejemplo10} en la que el porcentaje de ejemplos de validación se aumenta al 75\% para comprobar la validez con la mayoría de muestras. 
+Aun así el porcentaje de acierto es muy alto, en este caso es del 96.36\% ya que falla en la clasificación de cuatro muestras de un total de 110 muestras. Con esto se podría decir que el modelo funciona correctamente.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/cm_num_rn2.png}
+	\caption{Matriz de confusión redes neuronales con datos numéricos. 75\% ejemplos de validación} 	
+	\label{fig:ejemplo10}
 \end{figure}
 
 \subsection{KNN}
 \label{subsec:knn}
 
+Se elige el clasificador de KNN en el desplegable, se selecciona el número de vecinos que en este caso lo dejamos como viene y se escoge el porcentaje de muestras que se usan como ejemplos de validación que en este caso seleccionamos un 25\%, la configuración se puede observar en la figura~\ref{fig:ejemplo11}.
 
+Con este algoritmo se puede comprobar la validez del modelo con la matriz de confusión. En la figura~\ref{fig:ejemplo12} se puede ver un ejemplo de la matriz de confusión que en este caso tiene un 94.44\% de acierto ya que falla en la clasificación de dos muestras de un total de 36 muestras. Se comprueba la matriz de confusión varias veces para que escoja diferentes muestras y el porcentaje de acierto es alto, suele ser superior al 90\% por lo que se puede considerar un porcentaje de acierto óptimo. El uso de este conjunto de datos no es común para el algoritmo KNN pero con los resultados de la matriz de confusión se puede decir que su uso es óptimo y que las muestras se están recogiendo de la forma correcta.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=9cm, keepaspectratio]{img/ej_num_knn.png}
+	\caption{Configuración KNN} 	\label{fig:ejemplo11}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/cm_num_knn.png}
+	\caption{Matriz de confusión KNN con datos numéricos. 25\% ejemplos de validación} 	
+	\label{fig:ejemplo12}
+\end{figure}
+
+Una vez se ha comprobado la validez del modelo, se realizan pruebas en la aplicación con ejemplos de muestras en la parte de testeo para comprobar si realmente clasifica correctamente la muestra introducida, al igual que se hizo con redes neuronales.
+
+Para realizar las pruebas se escogen tres muestras aleatorias del conjunto de datos, una de cada clase:
+
+\begin{itemize}
+\item[•] Se escoge una muestra de la clase iris setosa, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 100\% pertenece a la clase iris setosa como se puede observar en la figura~\ref{fig:ejemplo13}.
+\item[•] Se escoge una muestra de la clase iris virginica, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 80\% pertenece a la clase iris virgínica como se puede observar en la figura~\ref{fig:ejemplo14}.
+\item[•] Se escoge una muestra de la clase iris versicolor, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 80\% pertenece a la clase iris versicolor como se puede observar en la figura~\ref{fig:ejemplo15}.
+\end{itemize}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=9cm, keepaspectratio]{img/iris_set_num_knn.png}
+	\caption{Muestra de test de la clase iris setosa con KNN} 	\label{fig:ejemplo13}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=9cm, keepaspectratio]{img/iris_vir_num_knn.png}
+	\caption{Muestra de test de la clase iris virginica con KNN} 	\label{fig:ejemplo14}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=9cm, keepaspectratio]{img/iris_ver_num_knn.png}
+	\caption{Muestra de test de la clase iris versicolor con KNN} 	\label{fig:ejemplo15}
+\end{figure}
+
+En este caso los porcentajes son múltiplos de 20 debido a que el parámetro K (número de vecinos) tiene el valor 5, por lo que la muestra tendrá 1,2,3,4 o 5 vecinos de una clase que se corresponden con el 20, 40, 60, 80 o 100 por ciento respectivamente. Este conjunto de datos no está pensado para su uso con este algoritmo porque como las clases iris virginica e iris versicolor tienen características similares se colocan cerca las dos clases en la distribución que hace KNN de las muestras y al escoger los vecinos más cercanos puede haber un fallo de asignación de la clase que es realmente. Aun así se realizan varias comprobaciones más con muestras de las tres clases y las clasifica correctamente exceptuando algún fallo con estas dos clases. Esto se puede comprobar en la matriz de confusión de la figura~\ref{fig:ejemplo16} en la que el porcentaje de ejemplos de validación se aumenta al 75\% para comprobar la validez con la mayoría de muestras. 
+Aun así el porcentaje de acierto es muy alto, en este caso es del 94.5\% ya que falla en la clasificación de seis muestras de un total de 110 muestras. Con esto se podría decir que el modelo funciona correctamente.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/cm_num_knn2.png}
+	\caption{Matriz de confusión KNN con datos numéricos. 75\% ejemplos de validación} 	
+	\label{fig:ejemplo16}
+\end{figure}
+
+Con estos resultados obtenidos se puede decir que el modelo se crea correctamente con conjuntos de datos numéricos y que el conjunto de datos flor iris es válido para los dos tipos de algoritmos.
 
 \section{Conjunto de datos numéricos y categóricos}
 \label{subsec:numericosycategoricos}
 
-Para la validación de un modelo se puede abrir el inspector del navegador y al crear el modelo en la consola se 
+Para comprobar la clasificación de un conjunto de datos numéricos y categóricos he utilizado el conjunto de datos de evaluación del coche que se encuentra en el archivo \texttt{car.json} de la carpeta datasets. Este dataset está compuesto de dos clases (good y vgood). La clase good tiene 69 muestras y la clase vgood tiene 65 muestras.
+Los atributos de las muestras son precio de compra, precio de mantenimiento, número de puertas, capacidad de personas, tamaño del maletero y seguridad estimada. 
+En la figura~\ref{fig:ejemplo17} se pueden observar las muestras de las distintas clases.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=9cm, keepaspectratio]{img/ejemplo_muestras_numycat.png}
+	\caption{Muestras con datos numéricos para el entrenamiento} 	\label{fig:ejemplo17}
+\end{figure}
+
+Al igual que con el conjunto de datos numéricos se prueba la validez con el algoritmo de redes neuronales y con el algoritmo de KNN.
+
+\subsection{Redes neuronales}
+\label{subsec:redesneuronales}
+
+La configuración es igual que en el caso de datos numéricos, figura~\ref{fig:ejemplo4}.
+Hay dos formas de comprobar la validez del modelo con el algoritmo de redes neuronales:
+
+\begin{itemize}
+\item[•] Con la gráfica de evolución de aprendizaje. En la figura~\ref{fig:ejemplo5} se puede ver que cuantas más epocas pasan más aciertos hay y alfinal de la gráfica el acierto es casi 1 como pasa con el conjunto de datos numéricos.
+Este resultado indica que el aprendizaje se está realizando correctamente.
+ \item[•] Con la matriz de confusión.En la figura~\ref{fig:ejemplo6} se puede ver un ejemplo de la matriz de confusión que en este caso tiene un 97\% de acierto, ya que falla en la clasificación de una muestra de un total de 33 muestras.Se comprueba la matriz de confusión varias veces y el fallo es muy bajo, el acierto suele ser superior al 90\% como pasa con el conjunto de datos numéricos, por lo que se puede considerar un porcentaje de acierto óptimo.
+ \end{itemize}
+ 
+ \begin{figure}
+	\centering
+	\includegraphics[width=10cm, keepaspectratio]{img/le_numycat_rn.png}
+	\caption{Gráfica de evolución de aprendizaje redes neuronales con datos numéricos y categóricos} 	\label{fig:ejemplo18}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/cm_numycat_rn.png}
+	\caption{Matriz de confusión redes neuronales con datos numéricos y categóricos. 25\% ejemplos de validación} 	
+	\label{fig:ejemplo19}
+\end{figure}
+
+ 
+Con los datos obtenidos en la gráfica de evolución de aprendizaje y en la matriz de confusión se puede decir que el modelo se crea correctamente, esto implica que las muestras se recogen de forma correcta y que la extracción de características es correcta. Además el algoritmo de redes neuronales es óptimo para el reconocimiento de este conjunto de datos.
+
+Una vez se ha comprobado la validez del modelo, se realizan pruebas en la aplicación para comprobar si realmente clasifica correctamente la muestra introducida. Para ello se escogen dos muestras aleatorias del conjunto de datos, una de cada clase:
+
+\begin{itemize}
+\item[•] Se escoge una muestra de la clase good,en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 86.54\% pertenece a la clase good como se puede observar en la figura~\ref{fig:ejemplo20}.
+\item[•] Se escoge una muestra de la clase vgood, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 95.13\% pertenece a la clase vgood como se puede observar en la figura~\ref{fig:ejemplo21}. 
+\end{itemize}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=9cm, keepaspectratio]{img/good_rn.png}
+	\caption{Muestra de test de la clase good con redes neuronales} 	\label{fig:ejemplo20}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=9cm, keepaspectratio]{img/vgood_rn.png}
+	\caption{Muestra de test de la clase vgood con redes neuronales} 	
+	\label{fig:ejemplo21}
+\end{figure}
+
+Además se realizan varias comprobaciones más con muestras de las dos clases y las clasifica correctamente. En algún caso puede fallar ya que las características son similares entre las dos clases pero el porcentaje de acierto es alto como se puede comprobar en la matriz de confusión de la figura~\ref{fig:ejemplo22} en la que el porcentaje de ejemplos de validación se aumenta al 75\% para comporbar la validez con la mayoría de muestras, en este caso el porcentaje de acierto es del 91\%. Con estos resultados se podría decir que el modelo funciona correctamente.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/cm_numycat_rn2.png}
+	\caption{Matriz de confusión redes neuronales con datos numéricos y categóricos. 75\% ejemplos de validación} 	
+	\label{fig:ejemplo22}
+\end{figure}
+
+\subsection{KNN}
+\label{subsec:knn}
+
+La configuración es igual que en el caso de datos numéricos, figura~\ref{fig:ejemplo11}. Con este algoritmo se puede comprobar la validez del modelo con la matriz de confusión. En la figura~\ref{fig:ejemplo23} se puede ver un ejemplo de la matriz de confusión que en este caso tiene un 93.93\% de acierto ya que falla en la clasificación de dos muestras de un total de 33 muestras. Se comprueba la matriz de confusión varias veces para que escoja diferentes muestras y el porcentaje de acierto es alto, suele ser superior al 80\% por lo que se puede considerar un porcentaje de acierto óptimo. Se podría decir que el modelo se crea correctamente.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/cm_numycat_knn.png}
+	\caption{Matriz de confusión KNN con datos numéricos y categóricos. 25\% ejemplos de validación} 	
+	\label{fig:ejemplo23}
+\end{figure}
+
+Una vez se ha comprobado la validez del modelo, se realizan pruebas en la aplicación con ejemplos de muestras en la parte de testeo para comprobar si realmente clasifica correctamente la muestra introducida, al igual que se hizo con redes neuronales.
+
+Para realizar las pruebas se escogen dos muestras aleatorias del conjunto de datos, una de cada clase:
+
+\begin{itemize}
+\item[•] Se escoge una muestra de la clase good, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 100\% pertenece a la clase good como se puede observar en la figura~\ref{fig:ejemplo24}.
+\item[•] Se escoge una muestra de la clase vgood, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 100\% pertenece a la clase iris virgínica como se puede observar en la figura~\ref{fig:ejemplo14}.
+\end{itemize}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=9cm, keepaspectratio]{img/good_knn.png}
+	\caption{Muestra de test de la clase good con KNN} 	\label{fig:ejemplo24}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=9cm, keepaspectratio]{img/vgood_knn.png}
+	\caption{Muestra de test de la clase vgood con KNN} 	\label{fig:ejemplo25}
+\end{figure}
+
+Además se realizan varias comprobaciones más con muestras de las dos clases y las clasifica correctamente exceptuando algún fallo. Esto se puede comprobar en la matriz de confusión de la figura~\ref{fig:ejemplo26} en la que el porcentaje de ejemplos de validación se aumenta al 75\% para comprobar la validez con la mayoría de muestras. 
+Aun así el porcentaje de acierto es aceptable, en este caso es del 69\% ya que falla en la clasificación de 31 muestras de un total de 100 muestras. Con esto se podría decir que el modelo funciona correctamente pero el uso de este algoritmo no es el más adecuado.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm, keepaspectratio]{img/cm_numycat_knn2.png}
+	\caption{Matriz de confusión KNN con datos numéricos y categóricos. 75\% ejemplos de validación} 	
+	\label{fig:ejemplo26}
+\end{figure}
+
+Con estos resultados obtenidos se puede decir que el modelo se crea correctamente con conjuntos de datos numéricos y categóricos y que el conjunto de datos de evaluación de coche es válido para los dos tipos de algoritmos pero es mejor usarlo con el algoritmo de redes neuronales.
+
+Como resultado final se puede decir que la creación de modelos es válida para conjuntos de datos, es decir, las muestras se recogen correctamete y la extracción de características también es correcta ya sea con datos numéricos o categóricos, y que dependiendo de como sean los conjuntos de datos funcionará mejor un algoritmo u otro pero lo importante de incluir la nueva funcionalidad es que el modelo se cree correctamente.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% RESULTADOS %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\cleardoublepage
-\chapter{Resultados}
-
-En este capítulo se incluyen los resultados de tu trabajo fin de grado.
-
-Si es una herramienta de análisis lo que has realizado, aquí puedes poner ejemplos de haberla utilizado para que se vea su utilidad.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
