@@ -215,12 +215,7 @@ As it is the translation of the ``Resumen'', which is supposed to be written at 
 En este capítulo se introduce el proyecto.
 Debería tener información general sobre el mismo, dando la información sobre el contexto en el que se ha desarrollado.
 
-No te olvides de echarle un ojo a la página con los cinco errores de escritura más frecuentes\footnote{\url{http://www.tallerdeescritores.com/errores-de-escritura-frecuentes}}.
 
-Aconsejo a todo el mundo que mire y se inspire en memorias pasadas.
-Las memorias de los proyectos que he llevado yo están (casi) todas almacenadas en mi web del GSyC\footnote{\url{https://gsyc.urjc.es/~grex/pfcs/}}.
-
-Dado que hoy 
 
 \section{Sección}
 \label{sec:seccion}
@@ -231,83 +226,25 @@ Por cierto, a veces me comentáis que no os compila por las tildes.
 Eso es un problema de codificación.
 Al guardar el archivo, guardad la codificación de ``ISO-Latin-1'' a ``UTF-8'' (o viceversa) y funcionará.
 
-\subsection{Estilo}
-\label{subsec:estilo}
-
-Recomiendo leer los consejos prácticos sobre escribir documentos científicos en \LaTeX \ de Diomidis Spinellis\footnote{\url{https://github.com/dspinellis/latex-advice}}.
-
-Lee sobre el uso de las comas\footnote{\url{http://narrativabreve.com/2015/02/opiniones-de-un-corrector-de-estilo-11-recetas-para-escribir-correctamente-la-coma.html}}. 
-Las comas en español no se ponen al tuntún.
-Y nunca, nunca entre el sujeto y el predicado (p.ej. en ``Yo, hago el TFG'' sobre la coma).
-La coma no debe separar el sujeto del predicado en una oración, pues se cortaría la secuencia natural del discurso.
-No se considera apropiado el uso de la llamada coma respiratoria o \emph{coma criminal}.
-Solamente se suele escribir una coma para marcar el lugar que queda cuando omitimos el verbo de una oración, pero es un caso que se da de manera muy infrecuente al escribir un texto científico (p.ej. ``El Real Madrid, campeón de Europa'').
-
-A continuación, viene una figura, la Figura~\ref{figura:foro_hilos}. 
-Observarás que el texto dentro de la referencia es el identificador de la figura (que se corresponden con el ``label'' dentro de la misma). 
-También habrás tomado nota de cómo se ponen las ``comillas dobles'' para que se muestren correctamente. 
-Nota que hay unas comillas de inicio (``) y otras de cierre (''), y que son diferentes.
-Volviendo a las referencias, nota que al compilar, la primera vez se crea un diccionario con las referencias, y en la segunda compilación se ``rellenan'' estas referencias. 
-Por eso hay que compilar dos veces tu memoria.
-Si no, no se crearán las referencias.
-
- \begin{figure}
-    \centering
-    \includegraphics[bb=0 0 800 600, width=12cm, keepaspectratio]{img/foro1}
-    \caption{Página con enlaces a hilos}
-    \label{figura:foro_hilos}
- \end{figure}
-
-A continuación un bloque ``verbatim'', que se utiliza para mostrar texto tal cual.
-Se puede utilizar para ofrecer el contenido de correos electrónicos, código, entre otras cosas.
-
-{\footnotesize
-\begin{verbatim}
-    From gaurav at gold-solutions.co.uk  Fri Jan 14 14:51:11 2005
-    From: gaurav at gold-solutions.co.uk (gaurav_gold)
-    Date: Fri Jan 14 19:25:51 2005
-    Subject: [Mailman-Users] mailman issues
-    Message-ID: <003c01c4fa40$1d99b4c0$94592252@gaurav7klgnyif>
-
-    Dear Sir/Madam,
-    How can people reply to the mailing list?  How do i turn off
-    this feature? How can i also enable a feature where if someone
-    replies the newsletter the email gets deleted?
-    Thanks
-
-    From msapiro at value.net  Fri Jan 14 19:48:51 2005
-    From: msapiro at value.net (Mark Sapiro)
-    Date: Fri Jan 14 19:49:04 2005
-    Subject: [Mailman-Users] mailman issues
-    In-Reply-To: <003c01c4fa40$1d99b4c0$94592252@gaurav7klgnyif>
-    Message-ID: <PC173020050114104851057801b04d55@msapiro>
-
-    gaurav_gold wrote:
-    >How can people reply to the mailing list?  How do i turn off
-    this feature? How can i also enable a feature where if someone
-    replies the newsletter the email gets deleted?
-
-    See the FAQ
-    >Mailman FAQ: http://www.python.org/cgi-bin/faqw-mm.py
-    article 3.11
-\end{verbatim}
-}
 
 \section{Estructura de la memoria}
 \label{sec:estructura}
 
-En esta sección se debería introducir la esctura de la memoria. 
-
-Así:
+La memoria de este trabajo se divide en seis capítulos, resumidos a continuación:
 
 \begin{itemize}
-  \item En el primer capítulo se hace una intro al proyecto.
+  \item[•] \textbf{Capítulo 1: Introducción.}
   
-  \item En el capítulo~\ref{chap:objetivos} (ojo, otra referencia automática) se muestran los objetivos del proyecto.
+  \item[•] \textbf{Capítulo 2: Objetivos.} Se describen tanto el objetivo principal como los objetivos específicos y la planificación temporal  del proyecto.
   
-  \item A continuación se presenta el estado del arte en el capítulo~\ref{chap:estado}.
+  \item[•] \textbf{Capítulo 3: Estado del arte.} Se explican cada una de las tecnologías usadas en el desarrollo del proyecto
   
-  \item \ldots
+  \item[•] \textbf{Capítulo 4: Diseño e implementación.} Se explica detalladamente la arquitectura de LearningMl y los cambios realizados sobre la arquitectura, así como el desarrollo e implementación de la nueva funcionalidad para reconocer conjuntos de datos
+  
+  \item[•] \textbf{Capítulo 5: Experimentos, validación y resultados.} Se comprueba si funciona correctamente la nueva funcionalidad en los dos algoritmos disponibles y con los dos tipos de datos que puede tener un conjunto de datos.
+  
+  \item[•] \textbf{Capítulo 6: Conclusiones.} Se exponen las conclusiones finales del proyecto, objetivos alcanzados y las lecciones aprendidas. Por último, se presentan posibles trabajos futuros que se podrían desarrollar para mejorar la aplicación web
+  
 \end{itemize}
 
 
@@ -324,24 +261,35 @@ Así:
 \section{Objetivo general} % título de sección (se muestra)
 \label{sec:objetivo-general} % identificador de sección (no se muestra, es para poder referenciarla)
 
-El trabajo fin de grado consiste en añadir a la aplicación web LearningML el reconocimiento de bases de datos.
-
-Recuerda que los objetivos siempre vienen en infinitivo.
+El objetivo de este trabajo fin de grado consiste en implementar el reconocimiento de conjuntos de datos en la aplicación web LearningML siguiendo la dinámica de los otros algoritmos de reconocimiento ya existentes y tratando de hacerlo de la forma más intuitiva y sencilla posible para el usuario.
 
 
 \section{Objetivos específicos}
 \label{sec:objetivos-especificos}
 
-Los objetivos específicos se pueden entender como las tareas en las que se ha desglosado el objetivo general.
-Y, sí, también vienen en infinitivo.
+Para llevar a cabo la realización del objetivo general se han planteado los siguientes objetivos especificos:
+
+\begin{itemize}
+\item[•] Analizar la arquitectura de LearningML para que la implemetación de la nueva funcionalidad siga la dinámica de lo ya creado.
+
+\item[•] Añadir a la interfaz un apartado para reconocer conjuntos de datos.
+
+\item[•] Comprender que son y como se pueden crear conjuntos de datos para saber como tienen que ser las muestras y crear el conjunto de datos. Esto es algo que también tiene que tener claro el usuario.
+
+\item[•] Entender como funciona la extracción de caracteristicas para poder extraer las caracteristicas de los conjuntos de datos.
+\end{itemize}
 
 
 \section{Planificación temporal}
 \label{sec:planificacion-temporal}
 
-A mí me gusta que aquí pongáis una descripción de lo que os ha llevado realizar el trabajo.
-Hay gente que añade un diagrama de GANTT.
-Lo importante es que quede claro cuánto tiempo llevas (tiempo natural, p.ej., 6 meses) y a qué nivel de esfuerzo (p.ej., principalmente los fines de semana).
+La idea de empezar con el TFG la tuve en abril de 2021 pero no tenía claro de que podía hacerlo. En mayo me puse en contacto con el Dr. Gregorio Robles y me comentó un poco el proyecto que estaba llevando a cabo Juan David Rodríguez.
+Me llamó la atención el proyecto y me propuso una lista de funcionalidades que Juan David quería realizar y la que más me llamo la atención fue el reconocimiento de conjuntos de datos ya que hoy en día se usan mucho y creo que son una parte importante del machine learning. 
+Una vez le confirmé a Gregorio que me interesaba añadir esa funcionalidad, me puso en contacto con Juan David para que me explicase el objetivo que perseguía con este proyecto y me comentase lo interesado que estaba en añadir esa funcionalidad.
+Después de hablar con Juan David me mandó un tutorial de Angular y durante un mes aproximadamente estuve aprendiendo a usar angular y comprender TypeScript. Una vez ya tenía claro como funcionaban los lenguajes tuve una reunión con Juan David a mediados de junio en la cual me explicó como funcionaba LearningML.
+Después vino el verano en el cual lo dejé apartado y a finales de agosto me volví a ver el tutorial de Angular para recordar el lenguaje ya que no me acordaba. En septiembre empecé con la implementación de la nueva funcionalidad y me surgieron varias dudas por lo que contacté con Juan David pero no fue hasta mediados de octubre que pudo atenderme debido a que el es profesor y con el comienzo del colegio estaba muy liado.
+Una vez me resolvió las dudas comencé con la implementación en la cual avancé bastante, modifiqué la arquitectura añadiendo el componente y servicio que era necesario y modifiqué la interfaz pero a finales de noviembre volví a tener dudas respecto a los tensores para la extracción de características y con los datos categóricos, dudas que me resolvío y a mediados de diciembre tenía la nueva funcionalidad implementada y quedé con Juan David para enseñarselo pero me comento que le gustaría cambiar el diseño de como mostrar los atributos y como solicitarlos. Después de las navidades a mediados de enero realicé esos cambios, se los enseñé y dimos por finalizada la implementación de la nueva funcionalidad, para llevar a cabo la implementación le dediqué unas 6 horas diarias y cuatro días a la semana.
+Por último quedaba crear la memoria y para ello me volví a poner en contacto con gregorio y me pasó la plantilla con los apartados a rellenar. Con la memoria comencé el 2 de febrero dedicandole unas 5-6 horas diarias, seis dias a la semana y finalmente el de febrero terminé.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -764,7 +712,7 @@ Los cambios realizados en la interfaz de usuario son:
 \section{Creación de conjuntos de datos} 
 \label{sec:crear conjunto de datos}
 
-Los conjuntos de datos se pueden crear o se pueden importar en formato JSON. En esta sección se explica como crearlo desde \texttt{learningML}. 
+Los conjuntos de datos se pueden crear o se pueden importar en formato JSON. En esta sección se explica como crearlo desde \texttt{LearningML}. 
 Se crea en el componente \texttt{ml-model} en la sección de entrenamiento y en el componente \texttt{ml-label-container}. 
 Al ser una colección de datos tabulados el conjunto se divide: en atributos, en ejemplares o muestras y en clases. 
 
@@ -855,7 +803,7 @@ También se muestra debajo los porcentajes que tiene cada clase de que la muestr
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \cleardoublepage
-\chapter{Experimentos y validación}
+\chapter{Experimentos, validación y resultados}
 
 En esta sección se realizan algunas comprobaciones para ver si los conjuntos de datos se clasifican correctamente.
 Para ello se usan dos conjuntos de datos, uno con datos numéricos y otro con datos numéricos y datos categoricos para comprobar si se guardan bien los conjuntos de datos y se extraen correctamente las características. 
@@ -1126,7 +1074,7 @@ Aun así el porcentaje de acierto es aceptable, en este caso es del 69\% ya que 
 
 Con estos resultados obtenidos se puede decir que el modelo se crea correctamente con conjuntos de datos numéricos y categóricos y que el conjunto de datos de evaluación de coche es válido para los dos tipos de algoritmos pero es mejor usarlo con el algoritmo de redes neuronales.
 
-Como resultado final se puede decir que la creación de modelos es válida para conjuntos de datos, es decir, las muestras se recogen correctamete y la extracción de características también es correcta ya sea con datos numéricos o categóricos, y que dependiendo de como sean los conjuntos de datos funcionará mejor un algoritmo u otro pero lo importante de incluir la nueva funcionalidad es que el modelo se cree correctamente.
+Como resultado final se puede decir que la creación de modelos de conjuntos de datos es válida , es decir, las muestras se recogen correctamete y la extracción de características también es correcta ya sea con datos numéricos o categóricos, y que dependiendo de como sean los conjuntos de datos funcionará mejor un algoritmo u otro.
 
 
 
@@ -1140,14 +1088,15 @@ Como resultado final se puede decir que la creación de modelos es válida para 
 \chapter{Conclusiones}
 \label{chap:conclusiones}
 
+Considero que el resultado del trabajo ha sido bueno y creo que la implementación de esta funcionalidad era necesario para LearningML ya que los conjuntos de datos estan a la orden del día y los alumnos deben conocer que son y la utilidad que pueden tener, en esto coincide Juan David Rodríguez y quedó muy satisfecho con el trabajo realizado.
+
 
 \section{Consecución de objetivos}
 \label{sec:consecucion-objetivos}
 
-Esta sección es la sección espejo de las dos primeras del capítulo de objetivos, donde se planteaba el objetivo general y se elaboraban los específicos.
+Haciendo referencia al capítulo 2, el objetivo principal del TFG era implementar la nueva funcionalidad para reconocer conjuntos de datos. Este objetivo se ha cumplido como se esperaba.
 
-Es aquí donde hay que debatir qué se ha conseguido y qué no. 
-Cuando algo no se ha conseguido, se ha de justificar, en términos de qué problemas se han encontrado y qué medidas se han tomado para mitigar esos problemas.
+En cuanto a los objetivos específicos, también se han cumplido. La arquitectura de LearningMl la he entendido y he seguido la dinámica de lo ya creado. Se ha modificado la interfaz correctamente y la creación de conjuntos de datos se realiza correctamente y de una forma sencilla e intuitiva. Por último la extracción de características se realiza correctamente y los resultados obtenidos son buenos.
 
 Y si has llegado hasta aquí, siempre es bueno pasarle el corrector ortográfico, que las erratas quedan fatal en la memoria final.
 Para eso, en Linux tenemos aspell, que se ejecuta de la siguiente manera desde la línea de \emph{shell}:
@@ -1159,46 +1108,53 @@ Para eso, en Linux tenemos aspell, que se ejecuta de la siguiente manera desde l
 \section{Aplicación de lo aprendido}
 \label{sec:aplicacion}
 
-Aquí viene lo que has aprendido durante el Grado/Máster y que has aplicado en el TFG/TFM. Una buena idea es poner las asignaturas más relacionadas y comentar en un párrafo los conocimientos y habilidades puestos en práctica.
+Para la realiación del proyecto, se han usado los conocimientos de varias asignaturas cursadas durante el grado como son las siguientes:
 
 \begin{enumerate}
-  \item a
-  \item b
+  \item[•] \textbf{Construcción de Servicios y Aplicaciones Audiovisuales en Internet (\emph{CSAAI})}. Esta asignatura ha sido de gran ayuda para tener conocimientos sobre el desarrollo web con lenguajes como JavaScript, HTML5 y CSS.
+  
+  \item[•] \textbf{Laboratorio de Tecnologías Audiovisuales en la Web (\emph{LTAW})}. Esta asignatura ha sido de gran ayuda para tener conocimientos sobre el desarrollo de aplicaciones web ya que aprendes a usar Node.js y plantillas.
+  
+  \item[•] \textbf{Informatica II}. Es una asignatura en la que aprendes un lenguaje complicado y altamente tipado como Ada, en el que aprendes a como llevar a cabo un programa de forma eficiente y limpia.
+  
+  \item[•] \textbf{Tratamiendo Digital de la Imagen y Tratamiento Digital del Sonido}. Esta asignatura ha sido de gran ayuda para comprender como funcionan los algoritmos utilizados en LearningML.
+  
+  \item[•] \textbf{Protocolos para la Transmisión de Audio y Vídeo por Internet (\emph{PTAVI})}. Esta asignatura es la que realmente hizo que cogiera el gusto a programar y en la que entendí como funcionaba la programación.
+  
 \end{enumerate}
 
 
 \section{Lecciones aprendidas}
 \label{sec:lecciones_aprendidas}
 
-Aquí viene lo que has aprendido en el Trabajo Fin de Grado/Máster.
+Con la implementación de la nueva funcionalidad he ampliado y mejorado los conocimientos adquiridos durante la carrera en el desarrollo de aplicaciones web además de aprender otros nuevos como son:
 
 \begin{enumerate}
-  \item Aquí viene uno.
-  \item Aquí viene otro.
+  \item Angular. Al principio tuve que dedicar bastante tiempo a entender su funcionamiento pero me ha parecido muy útil ya que facilita mucho el desarrollo web y de una forma muy organizada sobre todo para aplicaciones grandes debido a su arquitectura de componentes, servicios y módulos permite separar las funcionalidades y que se repita el código. Gracias a este framework añadir una nueva funcionalidad ha sido más sencillo y me alegro de haber aprendido a usar este framework porque tiene un gran potencial.
+  
+  \item Programación asíncrona. Antes de empezar el proyecto tenía una noción básica de que era la programación asíncrona pero no sabía para que podría usarse ni como implementarla. Una vez realizado el proyecto creo que es muy útil e indispensable en ciertas acciones de una aplicación web porque que no se bloquee es algo que valora mucho el ususario.
+  
+  \item TypeScript. No me resultó dificil comprender este lenguaje debido a que está basado en JavaScript pero con cambios que son sencillos de entender. Es un lenguaje que me parece más útil que JavaScript ya que tiene sus cosas buenas y fortalece sus debilidades.
 \end{enumerate}
 
 
 \section{Trabajos futuros}
 \label{sec:trabajos_futuros}
 
-Ningún proyecto ni software se termina, así que aquí vienen ideas y funcionalidades que estaría bien tener implementadas en el futuro.
+Las mejoras que se pueden añadir a la aplicación web LearningML pueden ser:
 
-Es un apartado que sirve para dar ideas de cara a futuros TFGs/TFMs.
+\begin{itemize}
+ \item[•] Añadir gráficos que representen la evolución de generación del modelo (entrenamiento), como los de the teachable machine.
+ 
+ \item[•] Incorporar en los sb3 de Scratch el modelo, para que pueda utilizarse el programa sin necesidad de volver a tener que generar dicho modelo a partir de los datos desde el editor de LML.
+ 
+ \item[•] Desarollar una versión offline del editor de LML y de Scratch.
+ 
+ \item[•] Añadir una nueva funcionalidad para el reconocimiento de la postura de la mano o de poses.
+ 
+ \item[•] Incluir otros algoritmos de aprendizaje como puede ser las máquinas de vectores de soporte.
+ \end{itemize} 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% APÉNDICE(S) %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\cleardoublepage
-\appendix
-\chapter{Manual de usuario}
-\label{app:manual}
-
-Esto es un apéndice.
-Si has creado una aplicación, siempre viene bien tener un manual de usuario.
-Pues ponlo aquí.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
