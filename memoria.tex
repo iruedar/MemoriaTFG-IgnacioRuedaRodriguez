@@ -157,17 +157,11 @@ Además, la pareja quizás no sea para siempre, pero tu madre sí.
 %\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
 \markboth{RESUMEN}{RESUMEN} % encabezado
 
-Aquí viene un resumen del proyecto.
-Ha de constar de tres o cuatro párrafos, donde se presente de manera clara y concisa de qué va el proyecto. 
-Han de quedar respondidas las siguientes preguntas:
+El objetivo de este proyecto consiste en añadir la funcionalidad de reconocimiento de conjuntos de datos a la aplicación web LearningML, que ya reconoce imágenes y textos.
 
-\begin{itemize}
-  \item ¿De qué va este proyecto? ¿Cuál es su objetivo principal?
-  \item ¿Cómo se ha realizado? ¿Qué tecnologías están involucradas?
-  \item ¿En qué contexto se ha realizado el proyecto? ¿Es un proyecto dentro de un marco general?
-\end{itemize}
+LearningML es una aplicación web que tiene como objetivo ayudar a los profesores de secundaria a explicar de una manera sencilla y visual el machine learning y para fomentar las habilidades de pensamiento computacional en alumnos de entre 10 y 16 años.
 
-Lo mejor es escribir el resumen al final.
+LearningML está creada en angular, que es un entorno de trabajo que utiliza HTML y CSS para la creación de aplicaciones web y utiliza TypeScript para implementar la funcionalidad de las aplicaciones web. Para llevar a cabo este proyecto ha sido necesario crear un nuevo servicio y un nuevo componente además de modificar algunos componentes y servicios, y crear distintas funciones pero siguiendo la dinámica de lo ya creado.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Resumen en inglés
@@ -176,9 +170,11 @@ Lo mejor es escribir el resumen al final.
 %\addcontentsline{toc}{chapter}{Summary} % si queremos que aparezca en el índice
 \markboth{SUMMARY}{SUMMARY} % encabezado
 
-Here comes a translation of the ``Resumen'' into English. 
-Please, double check it for correct grammar and spelling.
-As it is the translation of the ``Resumen'', which is supposed to be written at the end, this as well should be filled out just before submitting.
+The goal of this project consists of adding dataset recognition functionality to the LearningML web application, which already recognises images and text.
+
+LearningML is a web application that aims to help secondary school teachers explain machine learning in a simple and visual way and to foster computational thinking skills in students aged 10-16.
+
+LearningML is based on Angular, which is a framework that uses HTML and CSS to create web applications and uses TypeScript to implement the functionality of the web application. To carry out this project it has been necessary to create a new service and a new component, as well as to modify some components and services, and to create different functions but following the dynamics of what has already been created.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -212,19 +208,13 @@ As it is the translation of the ``Resumen'', which is supposed to be written at 
 \label{sec:intro} % etiqueta para poder referenciar luego en el texto con ~\ref{sec:intro}
 \pagenumbering{arabic} % para empezar la numeración de página con números
 
-En este capítulo se introduce el proyecto.
-Debería tener información general sobre el mismo, dando la información sobre el contexto en el que se ha desarrollado.
+Actualmente se generan una cantidad inmensa de datos digitales, tantos que se han multiplicado por más de treinta en la última década, pasando de dos zetabytes en 2010 a 64 zetabytes en 2020 y esta cantidad seguirá aumentando de forma exponencial~\cite{Pagina_de_Datos}. El problema es el procesamiento de los datos ya que debido a su complejidad los humanos no somos capaces de extraer información útil de tal cantidad de datos en un tiempo aceptable, para ello se utiliza la inteligencia artificial. El machine learning es una de las ramas de la inteligencia artificial que se utiliza para el procesamiento y análisis de los datos, ya que es capaz de analizar una gran cantidad de datos de manera eficiente y transformarlos en información más sencilla, legible y fácil de analizar por los humanos además de aportar muchas utilidades a partir de los datos que se generan, como puede ser anuncios personalizados en internet~\cite{rouhiainen2018inteligencia}.
 
+Debido al aumento del uso de la inteligencia artificial y del aprendizaje automático Juan David Rodríguez García decide crear la aplicación web LearningML dado que es un apasionado de la programación y al ser docente cree  que la introducción de contenidos de inteligencia artificial en la escuela a través de proyectos prácticos es el camino a seguir para educar ciudadanos conscientes y críticos, para despertar vocaciones entre los jóvenes y para fomentar las habilidades de pensamiento computacional. Por eso fue evaluada por estudiantes de 10 a 16 años mostrando su utilidad para aprender conceptos de inteligencia artificial y machine learning~\cite{Pagina_de_LearningML}.
 
+LearningML~\footnote{https://learningml.org/editor/} es una aplicación web dirigida al aprendizaje automático supervisado, una de las técnicas de IA más exitosas que se encuentra en la base de casi todas las aplicaciones actuales de IA y con la que se pretende cubrir la falta de herramientas para la enseñanza práctica de la Inteligencia Artificial. Es una herramienta que permite la enseñanza del aprendizaje automático de una forma sencilla haciendo que el reconocimiento de imágenes o el reconocimiento de textos se pueda hacer y observar de una manera sencilla y fácil de ver. Hace uso de los algoritmos de redes neuronales y KNN, permite descargar el modelo creado en un archivo JSON para poder usar ese modelo en otro momento y no tener que crear de nuevo el modelo, tiene la opción de registrarse para poder guardar los modelos en la nube y permite crear un modelo en scratch y utilizarlo en LearningML.
 
-\section{Sección}
-\label{sec:seccion}
-
-Esto es una sección, que es una estructura menor que un capítulo. 
-
-Por cierto, a veces me comentáis que no os compila por las tildes.
-Eso es un problema de codificación.
-Al guardar el archivo, guardad la codificación de ``ISO-Latin-1'' a ``UTF-8'' (o viceversa) y funcionará.
+Este proyecto consiste en la integración de un nuevo tipo de reconocimiento: el reconocimiento de conjuntos de datos. Los conjuntos de datos es una de las formas de almacenar todos los datos que se generan y por eso creo que es interesante que se disponga de este tipo de reconocimiento.
 
 
 \section{Estructura de la memoria}
@@ -233,9 +223,9 @@ Al guardar el archivo, guardad la codificación de ``ISO-Latin-1'' a ``UTF-8'' (
 La memoria de este trabajo se divide en seis capítulos, resumidos a continuación:
 
 \begin{itemize}
-  \item[•] \textbf{Capítulo 1: Introducción.}
+  \item[•] \textbf{Capítulo 1: Introducción.} Se explica el contexto en el que se ha desarrollado, se hace una breve explicación de qué es, para que se usa y cual es el objetivo de la aplicación web LearningML, y la estructura de la memoria.
   
-  \item[•] \textbf{Capítulo 2: Objetivos.} Se describen tanto el objetivo principal como los objetivos específicos y la planificación temporal  del proyecto.
+  \item[•] \textbf{Capítulo 2: Objetivos.} Se describen tanto el objetivo principal como los objetivos específicos y la planificación temporal del proyecto.
   
   \item[•] \textbf{Capítulo 3: Estado del arte.} Se explican cada una de las tecnologías usadas en el desarrollo del proyecto
   
@@ -267,16 +257,16 @@ El objetivo de este trabajo fin de grado consiste en implementar el reconocimien
 \section{Objetivos específicos}
 \label{sec:objetivos-especificos}
 
-Para llevar a cabo la realización del objetivo general se han planteado los siguientes objetivos especificos:
+Para llevar a cabo la realización del objetivo general se han planteado los siguientes objetivos específicos:
 
 \begin{itemize}
-\item[•] Analizar la arquitectura de LearningML para que la implemetación de la nueva funcionalidad siga la dinámica de lo ya creado.
+\item[•] Analizar la arquitectura de LearningML para que la implementación de la nueva funcionalidad siga la dinámica de lo ya creado.
 
 \item[•] Añadir a la interfaz un apartado para reconocer conjuntos de datos.
 
 \item[•] Comprender que son y como se pueden crear conjuntos de datos para saber como tienen que ser las muestras y crear el conjunto de datos. Esto es algo que también tiene que tener claro el usuario.
 
-\item[•] Entender como funciona la extracción de caracteristicas para poder extraer las caracteristicas de los conjuntos de datos.
+\item[•] Entender como funciona la extracción de características para poder extraer las características de los conjuntos de datos.
 \end{itemize}
 
 
@@ -288,8 +278,8 @@ Me llamó la atención el proyecto y me propuso una lista de funcionalidades que
 Una vez le confirmé a Gregorio que me interesaba añadir esa funcionalidad, me puso en contacto con Juan David para que me explicase el objetivo que perseguía con este proyecto y me comentase lo interesado que estaba en añadir esa funcionalidad.
 Después de hablar con Juan David me mandó un tutorial de Angular y durante un mes aproximadamente estuve aprendiendo a usar angular y comprender TypeScript. Una vez ya tenía claro como funcionaban los lenguajes tuve una reunión con Juan David a mediados de junio en la cual me explicó como funcionaba LearningML.
 Después vino el verano en el cual lo dejé apartado y a finales de agosto me volví a ver el tutorial de Angular para recordar el lenguaje ya que no me acordaba. En septiembre empecé con la implementación de la nueva funcionalidad y me surgieron varias dudas por lo que contacté con Juan David pero no fue hasta mediados de octubre que pudo atenderme debido a que el es profesor y con el comienzo del colegio estaba muy liado.
-Una vez me resolvió las dudas comencé con la implementación en la cual avancé bastante, modifiqué la arquitectura añadiendo el componente y servicio que era necesario y modifiqué la interfaz pero a finales de noviembre volví a tener dudas respecto a los tensores para la extracción de características y con los datos categóricos, dudas que me resolvío y a mediados de diciembre tenía la nueva funcionalidad implementada y quedé con Juan David para enseñarselo pero me comento que le gustaría cambiar el diseño de como mostrar los atributos y como solicitarlos. Después de las navidades a mediados de enero realicé esos cambios, se los enseñé y dimos por finalizada la implementación de la nueva funcionalidad, para llevar a cabo la implementación le dediqué unas 6 horas diarias y cuatro días a la semana.
-Por último quedaba crear la memoria y para ello me volví a poner en contacto con gregorio y me pasó la plantilla con los apartados a rellenar. Con la memoria comencé el 2 de febrero dedicandole unas 5-6 horas diarias, seis dias a la semana y finalmente el de febrero terminé.
+Una vez me resolvió las dudas comencé con la implementación en la cual avancé bastante, modifiqué la arquitectura añadiendo el componente y servicio que eran necesarios y modifiqué la interfaz pero a finales de noviembre volví a tener dudas respecto a los tensores para la extracción de características y con los datos categóricos, dudas que me resolvió y a mediados de diciembre tenía la nueva funcionalidad implementada y quedé con Juan David para enseñárselo pero me comento que le gustaría cambiar el diseño de como mostrar los atributos y como solicitarlos. Después de las navidades a mediados de enero realicé esos cambios, se los enseñé y dimos por finalizada la implementación de la nueva funcionalidad, para llevar a cabo la implementación le dediqué unas 6 horas diarias y cuatro días a la semana.
+Por último quedaba crear la memoria y para ello me volví a poner en contacto con Gregorio y me pasó la plantilla con los apartados a rellenar. Con la memoria comencé el 2 de febrero dedicándole unas 5-6 horas diarias, seis días a la semana y finalmente el de febrero terminé.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -304,7 +294,7 @@ Por último quedaba crear la memoria y para ello me volví a poner en contacto c
 \section{Inteligencia Artificial} 
 \label{sec:InteligenciaArtificial}
 
-La IA (\emph{Inteigencia Artificial})~\cite{rouhiainen2018inteligencia} se puede definir como la habilidad de los ordenadores para hacer actividades que normalmente requieren inteligencia humana. 
+La IA (\emph{Inteligencia Artificial})~\cite{rouhiainen2018inteligencia} se puede definir como la habilidad de los ordenadores para hacer actividades que normalmente requieren inteligencia humana. 
 Aunque de forma más técnica se puede definir como la capacidad de las máquinas para usar algoritmos, aprender de los datos y utilizar lo aprendido en la toma de decisiones como si se tratase de un humano.
 
 El uso de la IA cada vez es mayor, ya que nos ayuda a beneficiarnos de mejoras significativas y disfrutar de una mayor eficiencia en casi todos los ámbitos de la vida. 
@@ -332,8 +322,8 @@ Trata un elemento de la informática en el que los ordenadores o las máquinas t
 El aprendizaje automático usa algoritmos para aprender de diferentes patrones de datos, es decir, es un conjunto de algoritmos con los que se construyen modelos de predicción y clasificación a partir de conjuntos de datos. 
 Un ejemplo es la personalización de los sitios de medios sociales como Facebook o los resultados del motor de
 búsqueda de Google. 
-Otro ejemplo son  los filtros de Spam en el correo electronico. 
-Aprenden en base a unos patrones que tipo de mensajes son correo basura y cuales no y toman la decision de clasificarlos como tal o no.
+Otro ejemplo son  los filtros de Spam en el correo electrónico. 
+Aprenden en base a unos patrones que tipo de mensajes son correo basura y cuales no y toman la decisión de clasificarlos como tal o no.
 
 En el aprendizaje automático se diferencian tres tipos de aprendizaje:
 
@@ -353,7 +343,7 @@ En el aprendizaje automático se diferencian tres tipos de aprendizaje:
 \section{LearningML} 
 \label{sec:LearningML}
 
-LearningML~\cite{Pagina_de_LearningML} es una aplicación web creada por Juan David Rodríguez García en 2020, pero fué en 2019 cuando al autor decidió crear LearningML al participar en la confección de un recurso educativo\footnote{\url{https://code.intef.es/prop_didacticas/inteligencia-artificial-en-el-aula-con-scratch-3-0}}  sobre la enseñanza del aprendizaje automático en la escuela. 
+LearningML~\cite{Pagina_de_LearningML} es una aplicación web creada por Juan David Rodríguez García en 2020, pero fue en 2019 cuando al autor decidió crear LearningML al participar en la confección de un recurso educativo\footnote{\url{https://code.intef.es/prop_didacticas/inteligencia-artificial-en-el-aula-con-scratch-3-0}}  sobre la enseñanza del aprendizaje automático en la escuela. 
 La idea de crear LearningML surge porque la mayoría de las plataformas educativas de programación existentes carecen de algunas características necesarias para desarrollar proyectos completos de IA.
 
 La aplicación web consiste en facilitar la enseñanza de contenidos sobre el aprendizaje automático y el fomento del pensamiento computacional a alumnos de edades comprendidas entre los 10 y los 16 años. 
@@ -371,7 +361,7 @@ La última versión es la 13 publicada en noviembre de 2021.
 
 Angular es un \emph{framework} de código abierto desarrollado por Google que mediante el uso de TypeScript y HTML permite crear aplicaciones de una sola página, denominadas SPA (\emph{Single Page Application}).
 
-Las ventajas que tiene Angular es que mantiene la aplicación más ordenada, simplifica el codigo y evita escribir código repetitivo gracias a que sigue un modelo MVC (\emph{Modelo-Vista-Controlador}), a la vez que posibilita que las modificaciones y las actualizaciones de las aplicaciones sean rápidas y sencillas. 
+Las ventajas que tiene Angular es que mantiene la aplicación más ordenada, simplifica el código y evita escribir código repetitivo gracias a que sigue un modelo MVC (\emph{Modelo-Vista-Controlador}), a la vez que posibilita que las modificaciones y las actualizaciones de las aplicaciones sean rápidas y sencillas. 
 Además separa el \emph{frontend} y el \emph{backend} en la aplicación.
 
 La principal ventaja que tienen las SPA es que tiene una alta velocidad de carga entre las vistas que tiene la aplicación web, ya que cuando hay un cambio de vista no se recarga la página si no que las vistas se cargan de forma rápida, dinámica y reactiva. 
@@ -388,11 +378,11 @@ Las cuatro clases que utiliza son:
 
 	\item[•] \textbf{Módulos:} declaran un contexto de compilación para un conjunto de componentes. 
 	Los módulos juegan un papel fundamental en la estructuración de las aplicaciones Angular. 
-	Es donde se definen o declaran los componentes, las directivas y los sevicios que conforman la aplicación. 
+	Es donde se definen o declaran los componentes, las directivas y los servicios que conforman la aplicación. 
 	De manera que representa una agrupación lógica de lo que podríamos llamar áreas funcionales de una aplicación. 
 	También definen las rutas que establecen las vistas de la aplicación y las dependencias con otros módulos, es decir, que módulos necesita importar y que componentes o directivas exporta. 
 	
-	Cualquier aplicación de Angular tiene un módulo raiz, llamado \texttt{AppModule}, que proporciona el mecanismo de arranque que inicia la aplicación, pero no es el único, normalmente una aplicación contiene varios módulos funcionales, además de los propios del \emph{framework}. 
+	Cualquier aplicación de Angular tiene un módulo raíz, llamado \texttt{AppModule}, que proporciona el mecanismo de arranque que inicia la aplicación, pero no es el único, normalmente una aplicación contiene varios módulos funcionales, además de los propios del \emph{framework}. 
 	
 	Los módulos de Angular pueden importar o exportar funcionalidades de otros módulos, esto hace que cada módulo sea independiente. 
 	La organización en distintos módulos ayuda a gestionar el desarrollo de aplicaciones complejas y a la reutilización de código.
@@ -402,10 +392,10 @@ Las cuatro clases que utiliza son:
 	\item[•] \textbf{Componentes:} son los bloques de construcción que componen una aplicación, contienen la lógica y los datos de la aplicación. 
 	Cada componente tiene asociada una plantilla HTML. Las plantillas son las vistas que conforman la interfaz de usuario y se cargan cuando se cambia o modifica la URL.
 	
-	Una aplicación de Angular tiene al menos el componente raiz, llamado \texttt{AppComponent}, que conecta una jerarquía de componentes con el modelo de objeto del documento (DOM) de la página.
+	Una aplicación de Angular tiene al menos el componente raíz, llamado \texttt{AppComponent}, que conecta una jerarquía de componentes con el modelo de objeto del documento (DOM) de la página.
 	
 	Los componentes pueden tener uno o varios subcomponentes, estos pueden relacionarse entre sí de dos formas. 
-	Mediante eventos para actualizar datos cuando el usuario interacciona con la interfaz grafica y mediante las propiedades o interpolación para enviar datos a las plantillas que conforman las vistas. 
+	Mediante eventos para actualizar datos cuando el usuario interacciona con la interfaz gráfica y mediante las propiedades o interpolación para enviar datos a las plantillas que conforman las vistas. 
 	Esto hace que los cambios en el DOM pueden modificar los datos de la aplicación y los datos de la aplicación pueden modificar las plantillas.
 	
 	Para definir una clase como componente se utiliza el decorador \texttt{@NgComponent}.
@@ -418,7 +408,7 @@ Las cuatro clases que utiliza son:
 	\begin{itemize}
 	\item[*] Directivas de componente: los componentes son un tipo de directiva.
 	\item[*] Directivas de atributos: modifican el comportamiento o la apariencia de un elemento, componente o directiva.
-	\item[*] Directivas estructuales: modifican la apariencia agregando y eliminando elementos del DOM.
+	\item[*] Directivas estructurales: modifican la apariencia agregando y eliminando elementos del DOM.
 	\end{itemize}
 	
 	Se pueden crear directivas o Angular dispone de directivas integradas que se pueden usar para administrar formularios, listas, estilos y lo que ven los usuarios. 
@@ -441,18 +431,18 @@ Las cuatro clases que utiliza son:
 Angular CLI (\emph{Command Line Interface})~\cite{Pagina_de_angular_CLI} es una herramienta de interfaz de línea de comandos desarrollada por Angular que se utiliza para inicializar, desarrollar, montar y mantener aplicaciones de Angular directamente desde un shell de comandos. 
 
 Es una herramienta que facilita el inicio de una aplicación de Angular, porque con una instrucción \texttt{ngnew}, crea una carpeta de trabajo y genera el esqueleto de aplicación. 
-También tiene instrucciones que permiten crear nuevas clases de forma sencilla, creando los distintos archivos que forman un módulo, componente, servicio o una directiva, además de incluirlos en los archivos necesrios y crear las dependencias. 
+También tiene instrucciones que permiten crear nuevas clases de forma sencilla, creando los distintos archivos que forman un módulo, componente, servicio o una directiva, además de incluirlos en los archivos necesarios y crear las dependencias. 
 Las herramientas predefinidas más destacadas son el servidor web, el compilador y el sistema de testing.
 
 
 \subsection{MVC}
 \label{subsec:MVC}
 
-Para el desarrollo de una aplicación web Angular utiliza el patrón MVC (\emph{Modelo-Vista-Controlador})~\cite{Pagina_MVC} que se utiliza para separar en tres componentes los datos, la metodología y la interfaz gráfica de una aplicación, lo que permite modificar cada uno de ellos sin tener que modificar los demas. 
+Para el desarrollo de una aplicación web Angular utiliza el patrón MVC (\emph{Modelo-Vista-Controlador})~\cite{Pagina_MVC} que se utiliza para separar en tres componentes los datos, la metodología y la interfaz gráfica de una aplicación, lo que permite modificar cada uno de ellos sin tener que modificar los demás. 
 La arquitectura MVC está formada por tres componentes, que son:
 	\begin{itemize}
 	\item[•] \textbf{Modelo:} es el encargado de la manipulación, gestión y actualización de los datos. 
-	En el caso de que haya una base de datos es donde se realizan las consultas, busquedas o actualizaciones.  
+	En el caso de que haya una base de datos es donde se realizan las consultas, búsquedas o actualizaciones.  
 	
 	\item[•] \textbf{Vista:} es la representación gráfica de los datos proporcionados por el controlador. 
 	Ni el controlador ni el modelo se preocupan de cómo se verán los datos, toda la parte del diseño de la interfaz es responsabilidad de la vista.
@@ -470,10 +460,10 @@ Las ventajas que aporta esta arquitectura son:facilita el mantenimiento, permite
 HTML (\emph{HyperText Markup Language})~\cite{Pagina_HTML, Historia_HTML5, gauchat2012gran} es un lenguaje de marcado que se utiliza para definir la estructura y el contenido de una página Web, y es el componente más básico de una web. 
 Se escribe en texto plano y tiene una estructura de árbol de elementos y textos. 
 La estructura básica de un documento HTML se compone de los siguientes elementos: \texttt{<!DOCTYPE>}, \texttt{<html>}, \texttt{<head>} y \texttt{<body>}. 
-HTML provee los elementos estructurales y se complemeta con CSS para modificar la apariencia de la pagina y con JavaScript para proveer dinamismo y construir aplicaciones web completamente funcionales. 
+HTML provee los elementos estructurales y se complementa con CSS para modificar la apariencia de la pagina y con JavaScript para proveer dinamismo y construir aplicaciones web completamente funcionales. 
 
-La idea de desarrollar HTML5 nació en 2004, cuando el consorcio W3C (\emph{World Wide Web Consortium})  que está a cargo del estandar deció dejar de evolucionar HTML, por lo que la asociación WHATWG (\emph{Web HyperText Application Technology Working Group}), formada por Apple, Opera y Mozilla, decidió crear HTML5 y publicó el primer borrador de HTML5. 
-En el año 2007 W3C formó un grupo de trabajo autorizado para trabajar con WHATWG en el desarrollo de HTML5, pero en 2011 se separaron debido a que tenían distintos objetivos, W3C quería publicar una version terminada, mientras que WHATWG quería seguir trabajando en una constante evolución de HTML5. 
+La idea de desarrollar HTML5 nació en 2004, cuando el consorcio W3C (\emph{World Wide Web Consortium})  que está a cargo del estándar decidió dejar de evolucionar HTML, por lo que la asociación WHATWG (\emph{Web HyperText Application Technology Working Group}), formada por Apple, Opera y Mozilla, decidió crear HTML5 y publicó el primer borrador de HTML5. 
+En el año 2007 W3C formó un grupo de trabajo autorizado para trabajar con WHATWG en el desarrollo de HTML5, pero en 2011 se separaron debido a que tenían distintos objetivos, W3C quería publicar una versión terminada, mientras que WHATWG quería seguir trabajando en una constante evolución de HTML5. 
 En 2019, WHATWG y W3C firmaron un acuerdo para colaborar en una única versión de HTML en el futuro.
 
 Fue creado con la intención de hacerlo más eficiente que las versiones anteriores, mantener la compatibilidad con versiones anteriores y facilitar el desarrollo web compatible con distintos navegadores. Las principales novedades de HTML5 son:
@@ -509,7 +499,7 @@ Las principales novedades de CSS3 son: esquinas redondeadas, sombras en cajas y 
 
 TypeScript~\cite{Pagina_de_typescript} es un lenguaje de programación de código abierto desarrollado y mantenido por Microsoft. 
 Es un superconjunto de JavaScript, es decir, amplía JavaScript con una nueva sintaxis que añade tipos estáticos y objetos basados en clases. 
-Nació en 2012 como solución para el desarrollo de aplicaciones  robustas y de gran tamano, ya que con JavaScript era muy complicado debido a su escasa escalabilidad. 
+Nació en 2012 como solución para el desarrollo de aplicaciones  robustas y de gran tamaño, ya que con JavaScript era muy complicado debido a su escasa escalabilidad. 
 Su uso está permitido tanto en el lado del cliente como en el lado del servidor con Node.js
 
  Los programas de JavaScript son compatibles en TypeScript, por lo que se puede integrar en proyectos ya existentes porque a través de un compilador de TypeScript se traducen a código JavaScript original. 
@@ -553,7 +543,7 @@ Tiene un ecosistema integral y flexible de herramientas , bibliotecas y recursos
 \label{sec:JSON}
 
 JSON (\emph{JavaScript Object Notation})~\cite{Pagina_de_JSON} es un formato ligero de intercambio de datos. Es fácil de leer y escribir para los humanos, mientras que para las máquinas es sencillo de interpretar y generar. 
-A pesar de que está basado en un subconjunto del lenguaje de programación JavaScript, es un formato de texto completamente independiente del lenguaje. JSON está construído por dos estructuras:
+A pesar de que está basado en un subconjunto del lenguaje de programación JavaScript, es un formato de texto completamente independiente del lenguaje. JSON está construido por dos estructuras:
 
 \begin{itemize}
 	\item[•] Objeto: colección de pares de nombre/valor. Comienza con una llave de apertura y termina con una llave de cierre, cada nombre es seguido de dos puntos y los pares nombre/valor están separados por una coma.
@@ -573,7 +563,7 @@ Estas estructuras pueden anidarse y los valores pueden ser:
 
 Un conjunto de datos o dataset es una colección de datos tabulados, es decir, en forma de tabla. 
 Las columnas de la tabla son los atributos, que son le nombre de las características de los datos. 
-Las filas de la tabla son las muestras con los datos de los atributos, los datos pueden ser numéricos y categóricos, es decir, cadénas de caracteres. 
+Las filas de la tabla son las muestras con los datos de los atributos, los datos pueden ser numéricos y categóricos, es decir, cadenas de caracteres. 
 Las muestras se agrupan en clases, una clase tiene muestras con valores similares por lo que las muestras definen como es una clase. 
 Un ejemplo de un conjunto de datos muy utilizado en el aprendizaje automático es el \emph{conjunto de datos flor iris}\footnote{\url{https://es.wikipedia.org/wiki/Conjunto_de_datos_flor_iris}}, está compuesto de tres clases que son tres especies de la flor iris (iris setosa, iris virginica e iris versicolor), cuatro atributos (largo de sépalo, ancho de sépalo, largo de pétalo y ancho de pétalo) y 50 muestras de cada clase que definen como son cada flor.
 
@@ -591,14 +581,14 @@ Un ejemplo de un conjunto de datos muy utilizado en el aprendizaje automático e
 La arquitectura de LearningML está construida con Angular, por lo que está compuesta por módulos, componentes y servicios, de manera que es sencillo realizar cambios o añadir funcionalidades. 
 
 En la figura~\ref{fig:arquitectura} se puede ver la arquitectura general de LearningML, primero está el servicio \texttt{labeled-data-manager}, es de uso general y lo importan la mayoría de componentes y algunos sevicios, ya que se encarga de guardar  algunos datos que necesitan los servicios y componentes. 
-Luego está el componente \texttt{ml-home} que se corresponde con la página principal y es donde se selecciona que tipo de reconocimiento se desea realizar, reconocimiento de textos o de imagenes. Una vez se ha seleccionado se pasa al componente \texttt{ml-model} mediante routing con el modelo \texttt{app-routing} que funciona mediante rutas, por lo que además de cambiar de componente también se cambia de página. 
+Luego está el componente \texttt{ml-home} que se corresponde con la página principal y es donde se selecciona que tipo de reconocimiento se desea realizar, reconocimiento de textos o de imágenes. Una vez se ha seleccionado se pasa al componente \texttt{ml-model} mediante routing con el modelo \texttt{app-routing} que funciona mediante rutas, por lo que además de cambiar de componente también se cambia de página. 
 En función del reconocimiento escogido se mostrarán unos elementos u otros del HTML de \texttt{ml-model}.
 
 En el componente \texttt{ml-model} se importan los servicios \texttt{feature-extraction} y \texttt{ml-algorithm}, que a su vez el primero importa dos servicios: \texttt{feature-extractor-text} y \texttt{feature-extractor-
 image} y el segundo importa otros dos servicios: \texttt{ml-algorithm-knn} y \texttt{ml-algorithm-
 neural-networks}.
 
-El componente \texttt{ml-model} es el contructor del modelo y está dividido en tres secciones, la primera es donde se introducen los datos de entrenamiento, primero se introducen las distintas clases a las que puede pertenecer una entrada y una vez se ha introducido al menos una clase, entra en funcionamiento el componente \texttt{ml-label-container} que es donde se recogen las entradas de cada clase con los datos que se utilizan en la segunda sección, la parte de aprendizaje. \\
+El componente \texttt{ml-model} es el constructor del modelo y está dividido en tres secciones, la primera es donde se introducen los datos de entrenamiento, primero se introducen las distintas clases a las que puede pertenecer una entrada y una vez se ha introducido al menos una clase, entra en funcionamiento el componente \texttt{ml-label-container} que es donde se recogen las entradas de cada clase con los datos que se utilizan en la segunda sección, la parte de aprendizaje. \\
 En la parte de aprendizaje es donde se utiliza la función \texttt{train} que es donde realmente se realiza la construcción del modelo y se entrena, primero se realiza la extracción de características mediante el servicio \texttt{feature-extraction} y este es el que elige dependiendo del tipo de dato cual de los dos servicios usar para la extracción de características. 
 Después llama a \texttt{ml-algorithm} y este servicio decide que algoritmo utilizar para construir y entrenar el modelo para el reconocimiento. 
 Por defecto utiliza el algoritmo \texttt{ml-algorithm-neural-networks}, pero se puede seleccionar el modo avanzado en el cual se puede elegir entre los dos y modificar los parámetros del algoritmo.\\
@@ -616,7 +606,7 @@ En la figura~\ref{fig:arquitectura} también se puede observar que contiene prin
 
 \begin{itemize}
 	\item[•] labeled-data-manager: es el encargado de guardar datos, estos datos son características que definen el modelo. Guarda las etiquetas, es decir, las clases a las que puede pertenecer una entrada, esto se hace con la función \texttt{addLabel} que guarda las etiquetas en un array en la variable \texttt{labels} y en un objeto Map en la variable \texttt{labelsWithData}. 
-	Guarda los datos de entrada, ya sean textos o imágenes, con la función \texttt{addEntry} que los guarda en la variable \texttt{labelsWithData} junto con la clase en la que ha sido añadida la entrada para así tener cada etiqueta con sus datos. Guarda el tipo de modelo que se va a construir, es decir, el tipo de reconocimiento selecionado, en la variable \texttt{modelType}. También guarda el tipo de algoritmo en la variable \texttt{mlAlgorithm}. 
+	Guarda los datos de entrada, ya sean textos o imágenes, con la función \texttt{addEntry} que los guarda en la variable \texttt{labelsWithData} junto con la clase en la que ha sido añadida la entrada para así tener cada etiqueta con sus datos. Guarda el tipo de modelo que se va a construir, es decir, el tipo de reconocimiento seleccionado, en la variable \texttt{modelType}. También guarda el tipo de algoritmo en la variable \texttt{mlAlgorithm}. 
 	Además de guardar estos datos también borra etiquetas o entradas y se encarga de guardar o cargar los datos de un JSON tanto del ordenador como de la nube si el usuario está registrado.
 	
 	\item[•] feature-extraction: es el encargado de llamar a los otros dos servicios en función de si se quieren extraer características de un texto o de una imagen mediante la función \texttt{extractDatasetFeatures}.
@@ -633,9 +623,9 @@ En la figura~\ref{fig:arquitectura} también se puede observar que contiene prin
 	Tiene dos funciones principales, \texttt{train} y \texttt{classify} con las que llama a los otros servicios para entrenar o clasificar.
 	
 	\begin{itemize}
-		\item[*] ml-algoithm-knn: se usa en caso de que el algoritmo elegido sea K-NN. 
+		\item[*] ml-algorithm-knn: se usa en caso de que el algoritmo elegido sea K-KNN. 
 		Tiene dos funciones que son las que llama el servicio \texttt{ml-algorithm}, \texttt{train} para entrenar o \texttt{classify} para clasificar.
-		\item[*] ml-algorithm-neural-networks: tiene las mismas funciones que K-NN pero en este caso entrena o evalúa utilizando el algoritmo de redes neuronales.
+		\item[*] ml-algorithm-neural-networks: tiene las mismas funciones que K-KNN pero en este caso entrena o evalúa utilizando el algoritmo de redes neuronales.
 	\end{itemize}
 \end{itemize}
 
@@ -654,16 +644,16 @@ Para añadir la nueva funcionalidad tenía dos opciones en cuanto a la construcc
 \end{figure}
 
 Los cambios en la arquitectura se pueden observar en la figura~\ref{fig:arquitectura_nueva}. 
-Se ha añadido el componente \texttt{ml-test-dataset-model} para realizar el testeo cuando el tipo de reconocimiento es de conjuntos de datos, tiene la misma funcionalidad que cuando son textos o imagenes pero adaptado al tipo de datos que tiene un conjunto de datos y sigue utilizando e importando los servicios \texttt{feature-extraction} y \texttt{ml-algorithm}, para indicar como son ese tipo de datos se añadieron en el fichero \texttt{interfaces}. \\
+Se ha añadido el componente \texttt{ml-test-dataset-model} para realizar el testeo cuando el tipo de reconocimiento es de conjuntos de datos, tiene la misma funcionalidad que cuando son textos o imágenes pero adaptado al tipo de datos que tiene un conjunto de datos y sigue utilizando e importando los servicios \texttt{feature-extraction} y \texttt{ml-algorithm}, para indicar como son ese tipo de datos se añadieron en el fichero \texttt{interfaces}. \\
 También se ha añadido el servicio \texttt{feature-extractor-dataset} para extraer las características de los conjuntos de datos, es decir, convertir un conjunto de datos en un tensor. 
-La función que lo convierte en un tensor es \texttt{extractInstanceFeatures} al igual que en el caso de textos e imagenes.
+La función que lo convierte en un tensor es \texttt{extractInstanceFeatures} al igual que en el caso de textos e imágenes.
 
 Además en el servicio \texttt{labeled-data-manager} se ha añadido la función \texttt{addAtribute} para guardar los atributos del conjunto de datos en un array en la variable \texttt{attributes}. 
 Se han añadido variables para manejar cambios que se producen en el modelo como son \\ \texttt{featureDimensionLocked} y \texttt{addAttributeLocked}, son variables booleanas en las cuales cuando se cumple una condición cambian de valor y la condición son cambios en el modelo. 
 También ha añadido la variable \texttt{featureDimension} en la que se guarda el número de atributos que va a tener el modelo. \\
 Como este servicio también se encarga de cargar los datos de un JSON se ha añadido el caso en las funciones \texttt{load} y \texttt{loadFromServer} para cuando el \texttt{modelType} es \emph{dataset}. 
 Para cuando se guardan los datos se ha creado un nuevo objeto para cuando se genere el JSON, ya que ahora además de tener \texttt{type} con el tipo de modelo y \texttt{data} con las clases y sus entradas, también tiene \texttt{attributes} con los atributos. 
-Para esto se ha creado la función \texttt{getDataObject} que es llamada porla función \texttt{serializeModel} que a su vez es llamada por las funciones \texttt{save} y \texttt{saveOnServer}.
+Para esto se ha creado la función \texttt{getDataObject} que es llamada por la función \texttt{serializeModel} que a su vez es llamada por las funciones \texttt{save} y \texttt{saveOnServer}.
 
 
 \section{Cambios en la interfaz de LearningML} 
@@ -725,7 +715,7 @@ Primero hay que indicar el número de atributos que tiene el dataset y se guarda
 Después al pulsar el botón para añadir los atributos, este llama a la función \texttt{addAttribute} que deshabilita el input de introducción de número de atributos, esto es posible gracias a la variable \texttt{featureDimensionLocked} de \texttt{labeled-data-manager}.
 A continuación abre la ventana emergente \texttt{ml-add-attribute-
 dialog} para escribir los atributos separados por comas. 
-Si el número de atributos introducidos coincide con los de la variable \texttt{featureDimension} y todos tienen asignado un valor, es decir, se ha escrito antes y despues de cada coma, se mandan los atributos a la función \texttt{addAttribute} de \texttt{labeled-data-manager} para guardarlos y poder mostrarlos debajo en un desplegable para tener presente cuales son las características que tienen que tener los datos de entrada y para bloquear el botón para añadir atributos gracias a la variable \texttt{addAttributeLocked}. 
+Si el número de atributos introducidos coincide con los de la variable \texttt{featureDimension} y todos tienen asignado un valor, es decir, se ha escrito antes y después de cada coma, se mandan los atributos a la función \texttt{addAttribute} de \texttt{labeled-data-manager} para guardarlos y poder mostrarlos debajo en un desplegable para tener presente cuales son las características que tienen que tener los datos de entrada y para bloquear el botón para añadir atributos gracias a la variable \texttt{addAttributeLocked}. 
 En el caso de no introducir los atributos correctamente, estos no se guardan y sigue activo el botón para añadir atributos hasta que se introduzcan correctamente.
 
 El input para indicar el número de atributos y el botón para añadir atributos se bloquean porque todo el dataset tiene que tener la misma forma, es decir, todas las entradas deben de tener el mismo número de atributos, por lo que si ya se han añadido entradas y luego se modifica el número de atributos las entradas no van a coincidir en el número de atributos y esto no puede pasar.
@@ -743,7 +733,7 @@ La variable \texttt{labelsWithData} está compuesta de pares de datos clave-valo
 \label{subsec:datos}
 
 Las muestras de cada clase se añaden en el componente \texttt{ml-label-container}, para ello se ha creado la función \texttt{addRowToDataset} porque la forma que tienen las entradas es diferente, añade una fila con los valores de los atributos en la clase que se quiere añadir. 
-Primero abre una ventana emergente para añadir los valores separados por comas y si el número de valores introducidos coincide con el número de atributos de la variable \texttt{featureDimension} de \texttt{labeled-data-manager}, todos tienen asignado un valor, es decir, se ha escrito antes y despues de cada coma, y la muestra no está repetida, es decir, no contiene los mismos valores y en el mismo orden que otra ya introducida en esa clase, escribe la muestra en la interfaz de usuario y manda la muestra a la función \texttt{addEntry} de \texttt{labeled-data-manager} que guarda la muestra en la variable \texttt{labelsWithData} en la clase que ha sido añadida. Como \texttt{labelsWithData} está compuesta de pares de datos clave-valor \{\texttt{label}, \texttt{data}\} busca la clase en la que se quiere añadir la muestra y añade el string de datos de la muestra en el array \texttt{data}. 
+Primero abre una ventana emergente para añadir los valores separados por comas y si el número de valores introducidos coincide con el número de atributos de la variable \texttt{featureDimension} de \texttt{labeled-data-manager}, todos tienen asignado un valor, es decir, se ha escrito antes y después de cada coma, y la muestra no está repetida, es decir, no contiene los mismos valores y en el mismo orden que otra ya introducida en esa clase, escribe la muestra en la interfaz de usuario y manda la muestra a la función \texttt{addEntry} de \texttt{labeled-data-manager} que guarda la muestra en la variable \texttt{labelsWithData} en la clase que ha sido añadida. Como \texttt{labelsWithData} está compuesta de pares de datos clave-valor \{\texttt{label}, \texttt{data}\} busca la clase en la que se quiere añadir la muestra y añade el string de datos de la muestra en el array \texttt{data}. 
 En la figura~\ref{fig:ejemplo1} se puede observar el aspecto que tiene \texttt{labelsWithData}, este ejemplo consta de dos pares de datos clave-valor, uno por cada clase y las muestras que pertenecen a cada clase.
 
 \begin{figure}
@@ -774,10 +764,10 @@ dataset = {
 
 \texttt{labels} es un array que contiene el índice que le corresponde a la clase de cada muestra, \texttt{data} es un array que contiene los valores de cada muestra en forma de tensor y \texttt{dataArray} es un array que contiene los valores de cada muestra en forma de array con valores numéricos.
 
-La construción del objeto \texttt{dataset} se hace mediante dos bucles, el primero itera sobre las clases y el segundo sobre las muestras de cada clase. 
+La construcción del objeto \texttt{dataset} se hace mediante dos bucles, el primero itera sobre las clases y el segundo sobre las muestras de cada clase. 
 Para cada muestra llama a la función \texttt{addLabeledSample} que recibe como parámetro un objeto con la muestra y la clase a la que pertenece la muestra, esta función se encarga de añadir las características extraídas de cada muestra al objeto \texttt{dataset}. 
 Primero comprueba si la clase está dentro de las clases conocidas por el modelo y si no está la añade. 
-Después llama a la función \texttt{extractInstanceFeatures} de forma asíncrona y que recibe como parámetro la muestra para extraer las cararacterísticas, pero para ello tiene que llamar a la función \texttt{parseSamle} porque los datos de la muestra pueden ser números o una cadena de caracteres. 
+Después llama a la función \texttt{extractInstanceFeatures} de forma asíncrona y que recibe como parámetro la muestra para extraer las características, pero para ello tiene que llamar a la función \texttt{parseSamle} porque los datos de la muestra pueden ser números o una cadena de caracteres. 
 La función \texttt{parseSamle} recibe como parámetro la muestra que se separa por comas y cada valor de la muestra se pasa a \emph{float}, si es un número se guarda en la variable \texttt{sampleNum} y si no es un número se comprueba si el valor de la muestra está en la variable \texttt{sampleString} que es un objeto Map clave-valor siendo la clave el valor de la muestra y el valor una id. 
 Si el valor de la muestra no está en la variable \texttt{sampleString} se guarda en esa variable el valor de la muestra y en la id un número empezando por cero y sumando uno cada vez que se añada una muestra a la variable. 
 Después se guarda la id de la cadena de caracteres en la variable \texttt{sampleNum}, de esta forma se asigna un número a cada cadena de caracteres y cuando se repite una cadena de caracteres tiene el mismo número asignado que se le asigno a esa cadena de caracteres la primera vez que se guardó en la variable \texttt{sampleString}. 
@@ -790,10 +780,10 @@ Cuando ya están guardados todos los valores de la muestra en la variable \textt
 	\caption{Muestra con números y cadena de caracteres} 	\label{fig:ejemplo2}
 \end{figure}
 
-Cuando ya se han añadido todas las muestras de todas las clases al objeto \texttt{dataset}, la función \texttt{extractDatasetFeatures} devuelve un objeto con la siguiente estructura \{\texttt{text\_labels}, \texttt{tensor\_lables}, \texttt{tensor\_inputs}\} a la función \texttt{extractDatasetFeatures} de \\ \texttt{featureExtraction} que lo guarda en la variable \texttt{extractedFeatures} y se lo devuelve a la función \texttt{train} de \texttt{ml-model} que lo guarda en la variable \texttt{features} para pasarselo a como parámetro a la función \texttt{train} de los algoritmos y entrenen con los datos del objeto.
+Cuando ya se han añadido todas las muestras de todas las clases al objeto \texttt{dataset}, la función \texttt{extractDatasetFeatures} devuelve un objeto con la siguiente estructura \{\texttt{text\_labels}, \texttt{tensor\_lables}, \texttt{tensor\_inputs}\} a la función \texttt{extractDatasetFeatures} de \\ \texttt{featureExtraction} que lo guarda en la variable \texttt{extractedFeatures} y se lo devuelve a la función \texttt{train} de \texttt{ml-model} que lo guarda en la variable \texttt{features} para pasárselo a como parámetro a la función \texttt{train} de los algoritmos y entrenen con los datos del objeto.
 
-Cuando hay que extraer las características de los datos en la parte de testeo, el componente \texttt{ml-test-dataset-model} llama a la función \texttt{extractInstanceFeatures} de \texttt{feature-extraction} de forma asícrona y que recibe como parámetro la muestra introducida en la parte de test. 
-Después esta función llama a \texttt{extractInstanceFeatures} de \texttt{feature-extractor-dataset} que le pasa como parámetro la muestra y llama a \texttt{parseSample} igual que en la parte de entrenamiento y luego devuelve la muestra en forma de tensor de una dimensión a la función \texttt{extractInstanceFeatures} de \texttt{feature-extraction} que a su vez devuelve el resultado a \texttt{ml-test-dataset-model} que lo guarda en la variable \texttt{inputTensor} para pasarselo como parámetro a la función \texttt{classify} de los algoritmos y clasifiquen la muestra de forma asíncrona. 
+Cuando hay que extraer las características de los datos en la parte de testeo, el componente \texttt{ml-test-dataset-model} llama a la función \texttt{extractInstanceFeatures} de \texttt{feature-extraction} de forma asíncrona y que recibe como parámetro la muestra introducida en la parte de test. 
+Después esta función llama a \texttt{extractInstanceFeatures} de \texttt{feature-extractor-dataset} que le pasa como parámetro la muestra y llama a \texttt{parseSample} igual que en la parte de entrenamiento y luego devuelve la muestra en forma de tensor de una dimensión a la función \texttt{extractInstanceFeatures} de \texttt{feature-extraction} que a su vez devuelve el resultado a \texttt{ml-test-dataset-model} que lo guarda en la variable \texttt{inputTensor} para pasárselo como parámetro a la función \texttt{classify} de los algoritmos y clasifiquen la muestra de forma asíncrona. 
 Cuando ya ha clasificado la muestra se guarda la predicción en la variable \texttt{prediction} que es un array que contiene tantos arrays como clases tenga el modelo y cada array contiene el nombre de la clase y la probabilidad de que esa muestra pertenezca a esa clase, el primer array es el de mayor probabilidad y es el que se coge para escribir que es esa la clase a la que pertenece la muestra. 
 También se muestra debajo los porcentajes que tiene cada clase de que la muestra le pertenezca.
 
@@ -806,7 +796,7 @@ También se muestra debajo los porcentajes que tiene cada clase de que la muestr
 \chapter{Experimentos, validación y resultados}
 
 En esta sección se realizan algunas comprobaciones para ver si los conjuntos de datos se clasifican correctamente.
-Para ello se usan dos conjuntos de datos, uno con datos numéricos y otro con datos numéricos y datos categoricos para comprobar si se guardan bien los conjuntos de datos y se extraen correctamente las características. 
+Para ello se usan dos conjuntos de datos, uno con datos numéricos y otro con datos numéricos y datos categóricos para comprobar si se guardan bien los conjuntos de datos y se extraen correctamente las características. 
 Cabe destacar que todas las clases deben tener un número de muestras similar y cuanto mayor sea el conjunto de datos mejor serán los resultados.
 
 \section{Conjunto de datos numéricos}
@@ -832,14 +822,14 @@ Se elige el clasificador de redes neuronales en el desplegable, se seleccionan l
 Hay dos formas de comprobar la validez del modelo con el algoritmo de redes neuronales:
 
 \begin{itemize}
- \item[•] Con la gráfica de evolución de aprendizaje que muestra la evolución del modelo en cuanto a acierto y error a lo largo de las épocas. En la figura~\ref{fig:ejemplo5} se puede ver que cuantas más epocas pasan más aciertos hay y alfinal de la gráfica el acierto es casi 1, esto sucede porque este algoritmo aprende de sí mismo.
+ \item[•] Con la gráfica de evolución de aprendizaje que muestra la evolución del modelo en cuanto a acierto y error a lo largo de las épocas. En la figura~\ref{fig:ejemplo5} se puede ver que cuantas más épocas pasan más aciertos hay y al final de la gráfica el acierto es casi 1, esto sucede porque este algoritmo aprende de sí mismo.
 Por eso según van aumentando las épocas también aumenta el porcentaje de acierto y por consiguiente baja el porcentaje de fallo. Este resultado indica que el aprendizaje se está realizando correctamente.
  \item[•] Con la matriz de confusión que nos indica en forma de tabla los datos que predice y los que son en realidad, es decir, el número de aciertos y de fallos que ha tenido pero no de todas las muestras sino del 25\% que se han usado como ejemplo de validación. 
-En la figura~\ref{fig:ejemplo6} se puede ver un ejemplo de la matriz de confusión que en este caso tiene un 100\% de acierto, ya que de nueve muestras que predice que son de iris setosa las nueve lo son en realidad, de dieciseis muestras que predice que son iris versicolor las dieciseislo son en realidad y de once muestras que predice que son iris virginica las once lo son en realidad.
+En la figura~\ref{fig:ejemplo6} se puede ver un ejemplo de la matriz de confusión que en este caso tiene un 100\% de acierto, ya que de nueve muestras que predice que son de iris setosa las nueve lo son en realidad, de dieciséis muestras que predice que son iris versicolor las dieciséis son en realidad y de once muestras que predice que son iris virginica las once lo son en realidad.
 Pero no siempre sale el 100\% depende de las muestras que escoja de ejemplo de validación pero habiendo comprobado bastantes veces el fallo es muy bajo, el acierto suele ser superior al 90\% por lo que se puede considerar un porcentaje de acierto óptimo.
  \end{itemize} 
 
-Con los datos obtenidos en la gráfica de evolución de aprendizaje y en la matriz de confusión se puede decir que para este conjunto de datos numéricos el algoritmo de redes neuronales es óptimo para su reconocimiento y el modelo se crea correctamente, esto imploca que las muestras se están recogiendo de la forma correcta y la extracción de características es correcta porque los algoritmos ya estaban creados y funcionaban correctamente pero para ello había que pasarles las características extraidas de las muestras de la forma correcta.
+Con los datos obtenidos en la gráfica de evolución de aprendizaje y en la matriz de confusión se puede decir que para este conjunto de datos numéricos el algoritmo de redes neuronales es óptimo para su reconocimiento y el modelo se crea correctamente, esto implica que las muestras se están recogiendo de la forma correcta y la extracción de características es correcta porque los algoritmos ya estaban creados y funcionaban correctamente pero para ello había que pasarles las características extraídas de las muestras de la forma correcta.
 
 \begin{figure}
 	\centering
@@ -865,7 +855,7 @@ Una vez se ha comprobado la validez del modelo, se realizan pruebas en la aplica
 Para realizar las pruebas se escogen tres muestras aleatorias del conjunto de datos, una de cada clase:
 \begin{itemize}
 \item[•] Se escoge una muestra de la clase iris setosa, se introduce en la parte de testeo y como resultado se ve que clase se le asigna. En la figura~\ref{fig:ejemplo7} se puede observar el porcentaje de que la muestra evaluada pertenezca a una clase u otra, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 99.5\% pertenece a la clase iris setosa. 
-\item[•] Se escoge una muestra de la clase iris virginica, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 96.55\% pertenece a la clase iris virgínica como se puede observar en la figura~\ref{fig:ejemplo8}.
+\item[•] Se escoge una muestra de la clase iris virginica, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 96.55\% pertenece a la clase iris virginica como se puede observar en la figura~\ref{fig:ejemplo8}.
 \item[•] Se escoge una muestra de la clase iris versicolor, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 96.71\% pertenece a la clase iris versicolor como se puede observar en la figura~\ref{fig:ejemplo9}.
 \end{itemize}
 
@@ -923,7 +913,7 @@ Para realizar las pruebas se escogen tres muestras aleatorias del conjunto de da
 
 \begin{itemize}
 \item[•] Se escoge una muestra de la clase iris setosa, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 100\% pertenece a la clase iris setosa como se puede observar en la figura~\ref{fig:ejemplo13}.
-\item[•] Se escoge una muestra de la clase iris virginica, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 80\% pertenece a la clase iris virgínica como se puede observar en la figura~\ref{fig:ejemplo14}.
+\item[•] Se escoge una muestra de la clase iris virginica, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 80\% pertenece a la clase iris virginica como se puede observar en la figura~\ref{fig:ejemplo14}.
 \item[•] Se escoge una muestra de la clase iris versicolor, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 80\% pertenece a la clase iris versicolor como se puede observar en la figura~\ref{fig:ejemplo15}.
 \end{itemize}
 
@@ -979,7 +969,7 @@ La configuración es igual que en el caso de datos numéricos, figura~\ref{fig:e
 Hay dos formas de comprobar la validez del modelo con el algoritmo de redes neuronales:
 
 \begin{itemize}
-\item[•] Con la gráfica de evolución de aprendizaje. En la figura~\ref{fig:ejemplo5} se puede ver que cuantas más epocas pasan más aciertos hay y alfinal de la gráfica el acierto es casi 1 como pasa con el conjunto de datos numéricos.
+\item[•] Con la gráfica de evolución de aprendizaje. En la figura~\ref{fig:ejemplo5} se puede ver que cuantas más épocas pasan más aciertos hay y al final de la gráfica el acierto es casi 1 como pasa con el conjunto de datos numéricos.
 Este resultado indica que el aprendizaje se está realizando correctamente.
  \item[•] Con la matriz de confusión.En la figura~\ref{fig:ejemplo6} se puede ver un ejemplo de la matriz de confusión que en este caso tiene un 97\% de acierto, ya que falla en la clasificación de una muestra de un total de 33 muestras.Se comprueba la matriz de confusión varias veces y el fallo es muy bajo, el acierto suele ser superior al 90\% como pasa con el conjunto de datos numéricos, por lo que se puede considerar un porcentaje de acierto óptimo.
  \end{itemize}
@@ -1020,7 +1010,7 @@ Una vez se ha comprobado la validez del modelo, se realizan pruebas en la aplica
 	\label{fig:ejemplo21}
 \end{figure}
 
-Además se realizan varias comprobaciones más con muestras de las dos clases y las clasifica correctamente. En algún caso puede fallar ya que las características son similares entre las dos clases pero el porcentaje de acierto es alto como se puede comprobar en la matriz de confusión de la figura~\ref{fig:ejemplo22} en la que el porcentaje de ejemplos de validación se aumenta al 75\% para comporbar la validez con la mayoría de muestras, en este caso el porcentaje de acierto es del 91\%. Con estos resultados se podría decir que el modelo funciona correctamente.
+Además se realizan varias comprobaciones más con muestras de las dos clases y las clasifica correctamente. En algún caso puede fallar ya que las características son similares entre las dos clases pero el porcentaje de acierto es alto como se puede comprobar en la matriz de confusión de la figura~\ref{fig:ejemplo22} en la que el porcentaje de ejemplos de validación se aumenta al 75\% para comprobar la validez con la mayoría de muestras, en este caso el porcentaje de acierto es del 91\%. Con estos resultados se podría decir que el modelo funciona correctamente.
 
 \begin{figure}
 	\centering
@@ -1047,7 +1037,7 @@ Para realizar las pruebas se escogen dos muestras aleatorias del conjunto de dat
 
 \begin{itemize}
 \item[•] Se escoge una muestra de la clase good, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 100\% pertenece a la clase good como se puede observar en la figura~\ref{fig:ejemplo24}.
-\item[•] Se escoge una muestra de la clase vgood, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 100\% pertenece a la clase iris virgínica como se puede observar en la figura~\ref{fig:ejemplo14}.
+\item[•] Se escoge una muestra de la clase vgood, en este caso asigna correctamente la muestra a la clase que le corresponde ya que indica que al 100\% pertenece a la clase iris virginica como se puede observar en la figura~\ref{fig:ejemplo14}.
 \end{itemize}
 
 \begin{figure}
@@ -1074,7 +1064,7 @@ Aun así el porcentaje de acierto es aceptable, en este caso es del 69\% ya que 
 
 Con estos resultados obtenidos se puede decir que el modelo se crea correctamente con conjuntos de datos numéricos y categóricos y que el conjunto de datos de evaluación de coche es válido para los dos tipos de algoritmos pero es mejor usarlo con el algoritmo de redes neuronales.
 
-Como resultado final se puede decir que la creación de modelos de conjuntos de datos es válida , es decir, las muestras se recogen correctamete y la extracción de características también es correcta ya sea con datos numéricos o categóricos, y que dependiendo de como sean los conjuntos de datos funcionará mejor un algoritmo u otro.
+Como resultado final se puede decir que la creación de modelos de conjuntos de datos es válida , es decir, las muestras se recogen correctamente y la extracción de características también es correcta ya sea con datos numéricos o categóricos, y que dependiendo de como sean los conjuntos de datos funcionará mejor un algoritmo u otro.
 
 
 
@@ -1088,7 +1078,7 @@ Como resultado final se puede decir que la creación de modelos de conjuntos de 
 \chapter{Conclusiones}
 \label{chap:conclusiones}
 
-Considero que el resultado del trabajo ha sido bueno y creo que la implementación de esta funcionalidad era necesario para LearningML ya que los conjuntos de datos estan a la orden del día y los alumnos deben conocer que son y la utilidad que pueden tener, en esto coincide Juan David Rodríguez y quedó muy satisfecho con el trabajo realizado.
+Considero que el resultado del trabajo ha sido bueno y creo que la implementación de esta funcionalidad era necesario para LearningML ya que los conjuntos de datos están a la orden del día y los alumnos deben conocer que son y la utilidad que pueden tener, en esto coincide Juan David Rodríguez y quedó muy satisfecho con el trabajo realizado.
 
 
 \section{Consecución de objetivos}
@@ -1098,26 +1088,19 @@ Haciendo referencia al capítulo 2, el objetivo principal del TFG era implementa
 
 En cuanto a los objetivos específicos, también se han cumplido. La arquitectura de LearningMl la he entendido y he seguido la dinámica de lo ya creado. Se ha modificado la interfaz correctamente y la creación de conjuntos de datos se realiza correctamente y de una forma sencilla e intuitiva. Por último la extracción de características se realiza correctamente y los resultados obtenidos son buenos.
 
-Y si has llegado hasta aquí, siempre es bueno pasarle el corrector ortográfico, que las erratas quedan fatal en la memoria final.
-Para eso, en Linux tenemos aspell, que se ejecuta de la siguiente manera desde la línea de \emph{shell}:
-
-\begin{verbatim}
-  aspell --lang=es_ES -c memoria.tex
-\end{verbatim}
-
 \section{Aplicación de lo aprendido}
 \label{sec:aplicacion}
 
-Para la realiación del proyecto, se han usado los conocimientos de varias asignaturas cursadas durante el grado como son las siguientes:
+Para la realización del proyecto, se han usado los conocimientos de varias asignaturas cursadas durante el grado como son las siguientes:
 
 \begin{enumerate}
   \item[•] \textbf{Construcción de Servicios y Aplicaciones Audiovisuales en Internet (\emph{CSAAI})}. Esta asignatura ha sido de gran ayuda para tener conocimientos sobre el desarrollo web con lenguajes como JavaScript, HTML5 y CSS.
   
   \item[•] \textbf{Laboratorio de Tecnologías Audiovisuales en la Web (\emph{LTAW})}. Esta asignatura ha sido de gran ayuda para tener conocimientos sobre el desarrollo de aplicaciones web ya que aprendes a usar Node.js y plantillas.
   
-  \item[•] \textbf{Informatica II}. Es una asignatura en la que aprendes un lenguaje complicado y altamente tipado como Ada, en el que aprendes a como llevar a cabo un programa de forma eficiente y limpia.
+  \item[•] \textbf{Informática II}. Es una asignatura en la que aprendes un lenguaje complicado y altamente tipado como Ada, en el que aprendes a como llevar a cabo un programa de forma eficiente y limpia.
   
-  \item[•] \textbf{Tratamiendo Digital de la Imagen y Tratamiento Digital del Sonido}. Esta asignatura ha sido de gran ayuda para comprender como funcionan los algoritmos utilizados en LearningML.
+  \item[•] \textbf{Tratamiento Digital de la Imagen y Tratamiento Digital del Sonido}. Esta asignatura ha sido de gran ayuda para comprender como funcionan los algoritmos utilizados en LearningML.
   
   \item[•] \textbf{Protocolos para la Transmisión de Audio y Vídeo por Internet (\emph{PTAVI})}. Esta asignatura es la que realmente hizo que cogiera el gusto a programar y en la que entendí como funcionaba la programación.
   
@@ -1132,9 +1115,9 @@ Con la implementación de la nueva funcionalidad he ampliado y mejorado los cono
 \begin{enumerate}
   \item Angular. Al principio tuve que dedicar bastante tiempo a entender su funcionamiento pero me ha parecido muy útil ya que facilita mucho el desarrollo web y de una forma muy organizada sobre todo para aplicaciones grandes debido a su arquitectura de componentes, servicios y módulos permite separar las funcionalidades y que se repita el código. Gracias a este framework añadir una nueva funcionalidad ha sido más sencillo y me alegro de haber aprendido a usar este framework porque tiene un gran potencial.
   
-  \item Programación asíncrona. Antes de empezar el proyecto tenía una noción básica de que era la programación asíncrona pero no sabía para que podría usarse ni como implementarla. Una vez realizado el proyecto creo que es muy útil e indispensable en ciertas acciones de una aplicación web porque que no se bloquee es algo que valora mucho el ususario.
+  \item Programación asíncrona. Antes de empezar el proyecto tenía una noción básica de que era la programación asíncrona pero no sabía para que podría usarse ni como implementarla. Una vez realizado el proyecto creo que es muy útil e indispensable en ciertas acciones de una aplicación web porque que no se bloquee es algo que valora mucho el usuario.
   
-  \item TypeScript. No me resultó dificil comprender este lenguaje debido a que está basado en JavaScript pero con cambios que son sencillos de entender. Es un lenguaje que me parece más útil que JavaScript ya que tiene sus cosas buenas y fortalece sus debilidades.
+  \item TypeScript. No me resultó difícil comprender este lenguaje debido a que está basado en JavaScript pero con cambios que son sencillos de entender. Es un lenguaje que me parece más útil que JavaScript ya que tiene sus cosas buenas y fortalece sus debilidades.
 \end{enumerate}
 
 
@@ -1146,9 +1129,7 @@ Las mejoras que se pueden añadir a la aplicación web LearningML pueden ser:
 \begin{itemize}
  \item[•] Añadir gráficos que representen la evolución de generación del modelo (entrenamiento), como los de the teachable machine.
  
- \item[•] Incorporar en los sb3 de Scratch el modelo, para que pueda utilizarse el programa sin necesidad de volver a tener que generar dicho modelo a partir de los datos desde el editor de LML.
- 
- \item[•] Desarollar una versión offline del editor de LML y de Scratch.
+ \item[•] Desarrollar una versión offline del editor de LML y de Scratch.
  
  \item[•] Añadir una nueva funcionalidad para el reconocimiento de la postura de la mano o de poses.
  
